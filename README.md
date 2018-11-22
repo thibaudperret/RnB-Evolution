@@ -1,2 +1,2 @@
-"# DataVis-LyricsPositivity" 
-Project of analysing the lyrics positivity of top 100 end year billboard songs
+# Evolution of "R'n'B"
+The originally called "Rythm'n'Blues" genre has shifted through time. We want to show the difference between the 1960's RnB and today's RnB. We use Spotify's song features to do so.
