@@ -37,10 +37,12 @@ var INFO = {
 }
 
 var GENRES = ["contemporary-rnb", "british-rnb", "alternative-rnb", "new-jack-swing-rnb", "new-orleans-rnb", "jump-blues", "blue-eyed-soul"];
+var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "liveness", "speechiness"];
 
 whenDocumentLoaded(() => {
 	$.getJSON("./rnb_data.json", function(json) {
 		var graph = new Graph(json, INFO);
+		console.log(json);
 		graph.redraw();
 	});
 });
@@ -49,29 +51,53 @@ class Graph {
 	constructor(data, info) {
 		this.data = data;
 		this.info = info;
-		this.year = 1991;
+		this.year = 1964;
 		this.xFeature = "energy";
-		this.yFeature = "danceability"
+		this.yFeature = "valence";
+		this.xFeatureIndex = 0;
+		this.yFeatureIndex = 1;
 		this.xScale = d3.scaleLinear().domain([0, 1])
 		                              .range([0, 200]);
 		this.yScale = d3.scaleLinear().domain([0, 1])
 		                              .range([200, 0]);
 		this.svg = d3.select("#vis");
+		this.infoDiv = d3.select("#info");
+		this.audio = undefined;
+		this.playing = false;
+		this.drawAxis();
 	}
 	
-	redraw() {
-		this.svg.selectAll("circle")
-				.data(this.data.filter(d => d.year == this.year))
-				.enter()
-				.append("circle")
-				.attr("cx", d => this.xScale(d[this.xFeature]))
-				.attr("cy", d => this.yScale(d[this.yFeature]))
-				.on("mouseover", mouseOverCircle(this))
-				.on("mouseout", mouseOutCircle(this))
-				.attr("class", d => "normal " + d.genre)
-				.attr("r", 0)
-				.transition()
-				.attr("r", 2);
+	reset() {		
+		this.svg.selectAll(":not(.fixed)").remove();
+		this.infoDiv.selectAll("*").remove();
+	}
+	
+	redraw() {		   				
+		this.drawTitle();
+		this.drawLegend();
+		var gs = this.svg.selectAll("g")
+						 .data(this.data.filter(d => d.year == this.year), d => d)
+						 .enter()
+						 .append("g")
+						 .attr("class", "pointer")
+						 .on("mouseover", mouseOverCircle(this))
+						 .on("mouseout", mouseOutCircle(this));
+						 
+		gs.append("circle")
+		  .attr("cx", d => this.xScale(d[this.xFeature]))
+		  .attr("cy", d => this.yScale(d[this.yFeature]))
+		  .attr("class", d => "normal " + d.genre)
+		  .attr("r", 0)
+		  .transition()
+		  .attr("r", 2);
+	
+		gs.append("image")
+		  .attr("x", d => this.xScale(d[this.xFeature]) - 3)
+		  .attr("y", d => this.yScale(d[this.yFeature]) - 3)
+		  .attr("height", 0)
+		  .attr("width", 0)
+		  .attr("xlink:href", "play.png")
+		  .attr("class", "play pointer");
 				
 		if (this.info[this.year] != undefined) {
 			this.svg.append("image")
@@ -82,25 +108,13 @@ class Graph {
 					.attr("height", 10)
 					.on("mouseover", mouseOverKey(this))
 					.on("mouseout", mouseOutKey(this));
-			// var infoCard = this.svg.selectAll("rect")
-								   // .data(this.info[this.year])
-								   // .enter();
-			
-			// infoCard.append("rect")
-					// .attr("x", this.xScale(1))
-					// .attr("y", (d, i) => i * 55 - 10)
-					// .attr("class", "info-card");
-					
-			// infoCard.append("text")
-					// .attr("x", this.xScale(1) + 5)
-					// .attr("y", (d, i) => i * 55 + 10 - 10)
-					// .attr("font-size", 5)
-					// .attr("alignment-baseline", "text-before-edge")
-					// .text(d => d)
-					// .call(wrap, 70);
 		}
-		   
-		this.drawAxis();
+		
+		this.infoDiv.selectAll("p")
+					.data(this.info[this.year])
+					.enter()
+					.append("p")
+					.text(d => d);
 	}
 	
 	drawAxis() {
@@ -110,7 +124,7 @@ class Graph {
 				.attr("y1", this.yScale(0))
 				.attr("x2", this.xScale(1))
 				.attr("y2", this.yScale(0))
-				.attr("class", "axis");
+				.attr("class", "axis fixed");
 		   
 		// y-axis
 		this.svg.append("line")
@@ -118,13 +132,13 @@ class Graph {
 				.attr("y1", this.yScale(0))
 				.attr("x2", this.xScale(0))
 				.attr("y2", this.yScale(1))
-				.attr("class", "axis");
+				.attr("class", "axis fixed");
 		
 		// x-label
 		this.svg.append("text")
 				.attr("x", this.xScale(0.5))
 				.attr("y", this.yScale(-0.05))
-				.attr("class", "axis label")
+				.attr("class", "axis x label fixed")
 				.text(this.xFeature);
 		
 		// y-label
@@ -132,19 +146,56 @@ class Graph {
 				.attr("transform", "translate(" + this.xScale(-0.05) + "," + this.yScale(0.5) + ") rotate(270)")
 				//.attr("x", )
 				//.attr("y", this.yScale(0.5))
-				.attr("class", "axis label")
+				.attr("class", "axis y label fixed")
 				.text(this.yFeature);
-		
-		// title
+				
+		// x changers
+		this.svg.append("text")
+				.attr("x", this.xScale(0.3))
+				.attr("y", this.yScale(-0.05))
+				.attr("class", "axis label pointer fixed")
+				.text("◄")
+				.on("mouseover", d => console.log("YO"))
+				.on("click", d => changeFeature(this, "x", -1));
+				
+		this.svg.append("text")
+				.attr("x", this.xScale(0.7))
+				.attr("y", this.yScale(-0.05))
+				.attr("class", "axis label pointer fixed")
+				.text("►")
+				.on("click", d => changeFeature(this, "x", 1));
+				
+		// y changers
+		this.svg.append("text")
+				.attr("transform", "translate(" + this.xScale(-0.05) + "," + this.yScale(0.7) + ") rotate(270)")
+				// .attr("x", this.xScale(-0.05))
+				// .attr("y", this.yScale(0.7))
+				.attr("class", "axis label pointer fixed")
+				.text("►")
+				.on("click", d => changeFeature(this, "y", 1));
+				
+		this.svg.append("text")
+				.attr("transform", "translate(" + this.xScale(-0.05) + "," + this.yScale(0.3) + ") rotate(270)")
+				// .attr("x", this.xScale(-0.05))
+				// .attr("y", this.yScale(0.3))
+				.attr("class", "axis label pointer fixed")
+				.text("◄")
+				.on("click", d => changeFeature(this, "y", -1));
+	}
+	
+	drawTitle() {		
 		this.svg.append("text")
 				.attr("x", this.xScale(0.5))
 				.attr("y", -5)
 				.attr("class", "axis year")
 				.text(this.year);
-				
-		// legend
+	}
+	
+	drawLegend() {
+		var genres = Array.from(new Set(this.data.filter(d => d.year == this.year).map(d => d.genre)));
+		console.log(genres);
 		this.svg.selectAll("dontknow")
-				.data(GENRES)
+				.data(genres)
 				.enter()
 				.append("circle")
 				.attr("cx", this.xScale(1) + 40)
@@ -153,7 +204,7 @@ class Graph {
 				.attr("class", d => d);
 				
 		this.svg.selectAll("dontknow")
-				.data(GENRES)
+				.data(genres)
 				.enter()
 				.append("text")
 				.text(d => d)
@@ -164,12 +215,31 @@ class Graph {
 	
 	changeYear(year) {
 		this.year = year;
+		this.reset();
+		this.redraw();
 	}
 }
 
+function changeFeature(graph, xy, i) {
+	if (xy == "x") {
+		graph.xFeatureIndex = mod(graph.xFeatureIndex + i, FEATURES.length);
+		graph.xFeature = FEATURES[graph.xFeatureIndex];
+		graph.svg.select("text." + xy + ".label").text(graph.xFeature);
+	} else if (xy == "y") {
+		graph.yFeatureIndex = mod(graph.yFeatureIndex + i, FEATURES.length);
+		graph.yFeature = FEATURES[graph.yFeatureIndex];		
+		graph.svg.select("text." + xy + ".label").text(graph.yFeature);
+	}
+	graph.reset();
+	graph.redraw();
+}
+
 function mouseOverKey(graph) {
-	return function(d, i) {
-		displayKeyPoint(d, i, graph, this);
+	// return function(d, i) {
+		// displayKeyPoint(d, i, graph, this);
+	// }
+	return function (d, i) {
+		graph.changeYear(2003);
 	}
 }
 
@@ -179,12 +249,12 @@ function displayKeyPoint(d, i, graph, elem) {
 						   .enter();
 	
 	infoCard.append("rect")
-			.attr("x", graph.xScale(1) - 80)
+			.attr("x", graph.xScale(1) + 5)
 			.attr("y", (d, i) => i * 55)
 			.attr("class", "info-card");
 			
 	infoCard.append("text")
-			.attr("x", graph.xScale(1) - 80 + 5)
+			.attr("x", graph.xScale(1) + 5 + 5)
 			.attr("y", (d, i) => i * 55 + 10)
 			.attr("class", "info-card")
 			.text(d => d)
@@ -214,13 +284,17 @@ function displaySongInfo(d, i, graph, elem) {
 					   
 	var cardX;
 	if (d[graph.xFeature] < 0.5) {
-		cardX = graph.xScale(d[graph.xFeature]) + 5;
+		cardX = graph.xScale(d[graph.xFeature]) + 10;
 	} else {
-		cardX = graph.xScale(d[graph.xFeature]) - 5 - 60;
+		cardX = graph.xScale(d[graph.xFeature]) - 10 - 60;
 	}
 	var cardY = graph.yScale(d[graph.yFeature]) - 40;
 	if (cardY <= 0) {
 		cardY = 10;
+	}
+	
+	if (cardY + 80 > graph.yScale(0)) {
+		cardY = graph.yScale(0) - 75;
 	}
 	
 	g.append("rect")
@@ -248,8 +322,59 @@ function displaySongInfo(d, i, graph, elem) {
 	 .attr("y", cardY + 5)
 	 .attr("xlink:href", d.cover);
 	 
-	d3.select(elem)
-	  .attr("class", "selected " + d.genre).moveToFront();
+	var gp = d3.select(elem)
+			   .on("click", () => {
+				   if (graph.audio == undefined) {
+					   if (d.preview != "") {
+						   graph.audio = new Audio(d.preview);
+						   graph.audio.play();
+						   graph.playing = true;
+						   gp.select("image")
+						     .attr("xlink:href", "pause.png");
+							 
+						   graph.audio.onended = () => {
+							   graph.audio = undefined;
+						       gp.select("image")
+								 .attr("xlink:href", "play.png");
+						   };
+					   }
+				   } else {
+					   if (graph.playing) {
+						   graph.audio.pause();
+						   graph.playing = false;
+						   gp.select("image")
+						     .attr("xlilnk:href", "play.png");
+					   } else {
+						   graph.audio.play();
+						   graph.playing = true;
+						   gp.select("image")
+						     .attr("xlilnk:href", "pause.png");
+					   }
+				   }
+				   
+				   
+				   // if (graph.audio != undefined) {
+				  	   // graph.audio.pause();
+					   // graph.audio = undefined;
+					   // gp.select("image")
+					     // .attr("xlink:href", "play.png");
+				   // } else if (d.preview != "") {
+					   // graph.audio = new Audio(d.preview);
+					   // graph.audio.play();
+					   // gp.select("image")
+					     // .attr("xlink:href", "pause.png");
+				   // }
+			   })
+			   .moveToFront();
+			   
+	gp.select("circle")
+	  .attr("r", 5);
+	  
+	if (d.preview != "") {	  
+		gp.select("image")
+		  .attr("height", 6)
+		  .attr("width", 6);
+	}
 }
 
 function mouseOutCircle(graph) {
@@ -261,8 +386,23 @@ function mouseOutCircle(graph) {
 function removeSongInfo(d, i, graph, elem) {	
 	graph.svg.selectAll(".song-info")
 			 .remove();
+			 
+	if (graph.audio != undefined) {
+		graph.audio.pause();
+		graph.audio = undefined;
+		graph.playing = false;
+	}
+	
 	d3.select(elem)
-	  .attr("class", "normal " + d.genre);
+	  .select("circle")
+	  .attr("r", 2)
+	  .on("click", () => { return; });
+	  
+	d3.select(elem)
+	  .select("image")
+	  .attr("xlink:href", "play.png")
+	  .attr("height", 0)
+	  .attr("width", 0);
 }
 
 function wrap(text, width) {
@@ -327,4 +467,8 @@ function cut(text, width) {
 			tspan.text(line.join(""));
 		}
     });
+}
+
+function mod(n, m) {
+	return ((n % m) + m) % m;
 }

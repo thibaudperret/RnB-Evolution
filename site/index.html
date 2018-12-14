@@ -7,6 +7,7 @@
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	
 	<title>Evolution of R&B</title>
 	<meta name="author" content="Thibaud Perret, Lucas Massemin, Raphaël 'Mad' Madillo">
@@ -14,6 +15,13 @@
 </head>
 <body>
 	<script src="visualisation.js"></script>
-	<svg id="vis" viewBox="-20 -20 240 240" width="100%" height="100%" style="background:#fff"></svg>
+	<div class="container">
+		<div class="left">	
+			<svg id="vis" viewBox="-20 -20 240 240" width="100%" height="90%" style="background:#fff"></svg>
+			<svg id="timeline" width="100%" height="10%" style="background:#fff"></svg>
+		</div>
+		<div class="right" id ="info">
+		</div>
+	</div>
 </body>
 </html>
