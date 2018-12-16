@@ -45,6 +45,11 @@ text.axis {
 	text-anchor: middle;
 }
 
+text.timeline_label{
+	fill: #222;
+	text-anchor: middle;
+}
+
 text.label {
 	font-size: 8;
 }
@@ -133,4 +138,28 @@ text.song-name {
 
 .blue-eyed-soul {
 	fill: #2E61D7;
+}
+
+rect#track {
+	fill:blue;
+	stroke:pink;
+	stroke-width:5;
+	fill-opacity:0.1;
+	stroke-opacity:0.9;
+}
+
+rect#thumb {
+	fill:transparent;
+	stroke:black;
+	stroke-width:1;
+}
+
+circle.timeline_year{
+	fill-opacity:0.7;
+	stroke:black;
+	stroke-width:1;
+	pointer-events: none;
+}
+rect.draggable{
+		cursor: e-resize;
 }

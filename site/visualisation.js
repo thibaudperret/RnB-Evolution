@@ -38,20 +38,161 @@ var INFO = {
 
 var GENRES = ["contemporary-rnb", "british-rnb", "alternative-rnb", "new-jack-swing-rnb", "new-orleans-rnb", "jump-blues", "blue-eyed-soul"];
 var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "liveness", "speechiness"];
+var INIT_YEAR = 1964;
 
 whenDocumentLoaded(() => {
 	$.getJSON("./rnb_data.json", function(json) {
+		
 		var graph = new Graph(json, INFO);
 		console.log(json);
 		graph.redraw();
+		var slider = new Slider(INFO,graph);
+		slider.redraw()
 	});
 });
+
+class Slider {
+	constructor(data, graph) {
+		this.scale = d3.scaleLinear().domain([1939, 2018])
+									  .range([0, 800]);
+		
+		this.svg = d3.select("#timeline");
+		this.data = data;
+		this.scaleinv = d3.scaleLinear()
+					.domain([0,800])
+					.range([1940, 2017])
+					.clamp(true);
+		
+		this.year = INIT_YEAR;
+		this.graph = graph;
+	}
+	
+	
+	redrawTrack(){
+		this.svg.append("rect")
+		.attr("id","track")
+		.attr("x",0)
+		.attr("y",0)
+		.attr("rx",20)
+		.attr("ry",20)
+		.attr("width",800)
+		.attr("height",100)
+		.on("click", () => this.clickTrack());
+	}
+	
+	redrawCircle() {
+		this.svg.selectAll("circle.timeline_year")
+				.data(Object.keys(this.data))
+				.enter()
+				.append("circle")
+				.attr("class","timeline_year")
+				.attr("cx", d => this.scale(d)) 
+				.attr("cy", 50)
+				.attr("r", 10)
+				.attr("fill","red")
+				.filter(d => d == this.year)
+				.attr("fill", "blue");
+	}
+	
+	redrawThumb(year) {
+		this.svg.append("rect")
+		.attr("id","thumb")
+		.attr("x", this.scale(year)-5)
+		.attr("y",2)
+		.attr("width",10)
+		.attr("height",96)
+		.attr("rx",3)
+		.attr("class", "draggable")
+		.call(d3.drag()
+			.on("start", this.dragstarted)
+			.on("drag", this.drag_func())
+			.on("end", this.dragended)
+			);
+	}
+	
+	redrawAxis(){
+		var labels = ["40s", "50s", "60s", "70s", "80s", "90s", "00s", "10s"];
+		
+		var labelScale = d3.scaleLinear().domain([0,7])
+								.range([1940, 2010]);
+		this.svg.selectAll("text")
+				.data(labels)
+				.enter()
+				.append("text")
+				.attr("x",(d,i) => this.scale(labelScale(i)))
+				.attr("y", -10)
+				.text(d => d)
+				.attr("class", "timeline_label");
+	}
+	
+	redrawKDots(){
+		var range = Array(78);
+		
+		this.svg.selectAll("kdots")
+				.data(range)
+				.enter()
+				.append("circle")
+				.attr("class","kdot")
+				.attr("cx", (d,i) => this.scale(i+1940)) 
+				.attr("cy", 50)
+				.attr("r", 1)
+				.attr("fill","black");
+	}
+	
+	redraw(){
+		this.redrawTrack();
+		this.redrawKDots();
+		this.redrawCircle();
+		this.redrawThumb(this.year);
+		this.redrawAxis();
+		
+	}
+	
+	dragstarted() {
+		d3.select(this).raise().classed("active", true);
+	}
+	
+	drag_func(){
+		return (d,i) => this.dragged();
+	}
+
+	dragged() {
+							  
+		var newyear = Math.round(this.scaleinv(d3.event.x));
+
+		this.changeYear(newyear);	
+	}
+	
+	dragended() {
+		d3.select(this).classed("active", false);
+	}
+		
+	clickTrack(){
+		var newyear = Math.round(this.scaleinv(d3.event.offsetX));
+		this.changeYear(newyear);
+			
+	}
+	
+	changeYear(newyear){
+		this.svg.select("#thumb").attr("x", this.scale(newyear)-5)
+		this.svg.selectAll("circle.timeline_year")
+				.data(Object.keys(this.data))
+				.attr("fill", "red")
+				.filter(d => d == newyear)
+				.attr("fill", "blue");
+				
+		if (newyear != this.year) {
+			this.year = newyear;
+			this.graph.changeYear(this.year);
+		}
+	}
+}
 
 class Graph {
 	constructor(data, info) {
 		this.data = data;
 		this.info = info;
-		this.year = 1964;
+		this.year = INIT_YEAR;
 		this.xFeature = "energy";
 		this.yFeature = "valence";
 		this.xFeatureIndex = 0;
@@ -108,13 +249,14 @@ class Graph {
 					.attr("height", 10)
 					.on("mouseover", mouseOverKey(this))
 					.on("mouseout", mouseOutKey(this));
-		}
 		
-		this.infoDiv.selectAll("p")
-					.data(this.info[this.year])
-					.enter()
-					.append("p")
-					.text(d => d);
+		
+			this.infoDiv.selectAll("p")
+						.data(this.info[this.year])
+						.enter()
+						.append("p")
+						.text(d => d);
+		}
 	}
 	
 	drawAxis() {
