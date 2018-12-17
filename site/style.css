@@ -11,7 +11,10 @@ div.container {
 
 div.right {
 	width: 20%;
-	margin: 50px 20px;
+	margin-left: 20px;
+	padding: 50px 20px 0px 20px;
+	background-color: #ffd5e5;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, .2);
 }
 
 div.left {
@@ -32,12 +35,25 @@ text {
 	cursor: default;
 }
 
-p {
+.card {
 	font-family: 'Open Sans', sans-serif;
 	margin: 15px 5px;
 	padding: 10px 10px;
+	min-width: 200px;
 	background: #ffffff;
 	box-shadow: 0px 1px 4px rgba(0, 0, 0, .2);
+}
+
+.card p {
+	text-align: justify;
+}
+
+.card a {
+	text-align: right;	
+}
+
+a.link {
+	font-size: 10px;
 }
 
 text.axis {
@@ -56,6 +72,14 @@ text.label {
 
 .pointer {
 	cursor: pointer;
+}
+
+.label.axis.pointer {
+	fill: #ddd;
+}
+
+.label.axis.pointer:hover {
+	fill: #222;
 }
 
 text.year {
@@ -160,6 +184,7 @@ circle.timeline_year{
 	stroke-width:1;
 	pointer-events: none;
 }
+
 rect.draggable{
-		cursor: e-resize;
+	cursor: e-resize;
 }

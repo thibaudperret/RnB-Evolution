@@ -13,42 +13,52 @@ d3.selection.prototype.moveToFront = function() {
 	});
 };
 
-var INFO = {
- "1947": ["Creation of 'Atlantic Records', a major label in R&B"],
- "1949": ["The term 'Rhythm and Blues' replaced the Billboard category 'Race Records' for music of African American Origin destined to a black audience"],
- "1950": ["Ruth Brown sing 'Teardrops from My Eyes', the title stay as BillBoard\u2032s number-one R&B hit for 11 non-consecutive weeks and Brown earned the title of 'Queen of the R&B'"], 
- "1951": ["Johnny Otis, 'the Godfather of Rhythm and Blues' hit 3 time the top R&B chart with  'Double Crossing Blues', 'Mistrustin' Blues' and 'Cupid's Boogie' "],
- "1957": ["Elvis Presley one of the first non african american artist to enter Rhythm and Blues Billboard chart with 'Jailhouse Rock' and 'All Shook up' "], 
- "1960": ["Start of mob culture in UK influenced by R&B music, there music is named as British Rythme and Blues", "Music industry start labeling Rhythme and Blues form white artist under genre of Blue Eyed Soul"],
- "1963": ["Billboard combine its pop and R&B chart because there were too similar", "The Who record there first album 'My Generation' under 'Maximum R&B' genre"], 
- "1964": ["The Rolling Stones publish there first eponym ablum registered under British R&B", "R&B music starts to be involved in Civil Rights movement with Sam Cooke's 'A change is gonna come' and Curtis Mayfield\u2019s 'Keep on Pushing' "],
- "1965": ["The Billboard changed name for music of African American Origin to 'R&B' "],
- "1968": ["James Brown release his single 'Say It Loud \u2013 I'm Black and I'm Proud', an unofficial anthem of the Black Power movement"],
- "1969": ["The Billboard renamed African American Origin music to from 'R&B' to 'soul'", "Grammys first added Rhythm and Blues category, giving it a academic recognition"], 
- "1980": ["Contemporary R&B is created after the demise of disco in the 80s it is 'a genre of smooth pop music that is entirely centered on the vocalist' and different from original Rhythm and Blues music"],
- "1982": ["The Billboard renamed African American Origin music to from 'soul' to 'black'"], 
- "1986": ["Release of Control by Janet Jackson, 'Control is regarded as one of the most influential albums in the history of rhythm and blues and the first album to bridge the gap between R&B and rap music.' (musicologist Richard J. Ripani, author of The New Blue Music: Changes in Rhythm & Blues, 1950\u20131999 (2006)). It also popularize new jack swing genre."],
- "1988": ["George Nelson, music editor to Billboard describe the development of retail outlets for R&B records in a book named 'The Death of Rhythm and Blues'"],
- "1989": ["Mariah Carey 'Vision of love' single becomes reach the number 1 US Billboard Hot 100 and popularize melisma (singing of a single syllable of text while moving between several different notes in succession) in R&B"],
- "1990": ["The Billboard finally changed the soul category to 'R&B' and it remains until today to represent more a type of music than a the race of an audience"],
- "1995": ["First Grammy Award for Best R&B Album goes to II by Boyz II Men"],
- "1996": ["R. Kelly with nickname 'the king of R&B' release 'I belive I can fly' and win 3 Grammy awards"],
- "2003": ["The music journalist Robert Christgau said 'Modern r&b isn't about discrete songs. It's about texture, mood, feel\u2014vocal and instrumental and rhythmic, articulated as they're smooshed together.'"]
-}
+// var INFO = {
+ // "1947": ["Creation of 'Atlantic Records', a major label in R&B"],
+ // "1949": ["The term 'Rhythm and Blues' replaced the Billboard category 'Race Records' for music of African American Origin destined to a black audience"],
+ // "1950": ["Ruth Brown sing 'Teardrops from My Eyes', the title stay as BillBoard\u2032s number-one R&B hit for 11 non-consecutive weeks and Brown earned the title of 'Queen of the R&B'"], 
+ // "1951": ["Johnny Otis, 'the Godfather of Rhythm and Blues' hit 3 time the top R&B chart with  'Double Crossing Blues', 'Mistrustin' Blues' and 'Cupid's Boogie' "],
+ // "1957": ["Elvis Presley one of the first non african american artist to enter Rhythm and Blues Billboard chart with 'Jailhouse Rock' and 'All Shook up' "], 
+ // "1960": ["Start of mob culture in UK influenced by R&B music, there music is named as British Rythme and Blues", "Music industry start labeling Rhythme and Blues form white artist under genre of Blue Eyed Soul"],
+ // "1963": ["Billboard combine its pop and R&B chart because there were too similar", "The Who record there first album 'My Generation' under 'Maximum R&B' genre"], 
+ // "1964": ["The Rolling Stones publish there first eponym ablum registered under British R&B", "R&B music starts to be involved in Civil Rights movement with Sam Cooke's 'A change is gonna come' and Curtis Mayfield\u2019s 'Keep on Pushing' "],
+ // "1965": ["The Billboard changed name for music of African American Origin to 'R&B' "],
+ // "1968": ["James Brown release his single 'Say It Loud \u2013 I'm Black and I'm Proud', an unofficial anthem of the Black Power movement"],
+ // "1969": ["The Billboard renamed African American Origin music to from 'R&B' to 'soul'", "Grammys first added Rhythm and Blues category, giving it a academic recognition"], 
+ // "1980": ["Contemporary R&B is created after the demise of disco in the 80s it is 'a genre of smooth pop music that is entirely centered on the vocalist' and different from original Rhythm and Blues music"],
+ // "1982": ["The Billboard renamed African American Origin music to from 'soul' to 'black'"], 
+ // "1986": ["Release of Control by Janet Jackson, 'Control is regarded as one of the most influential albums in the history of rhythm and blues and the first album to bridge the gap between R&B and rap music.' (musicologist Richard J. Ripani, author of The New Blue Music: Changes in Rhythm & Blues, 1950\u20131999 (2006)). It also popularize new jack swing genre."],
+ // "1988": ["George Nelson, music editor to Billboard describe the development of retail outlets for R&B records in a book named 'The Death of Rhythm and Blues'"],
+ // "1989": ["Mariah Carey 'Vision of love' single becomes reach the number 1 US Billboard Hot 100 and popularize melisma (singing of a single syllable of text while moving between several different notes in succession) in R&B"],
+ // "1990": ["The Billboard finally changed the soul category to 'R&B' and it remains until today to represent more a type of music than a the race of an audience"],
+ // "1995": ["First Grammy Award for Best R&B Album goes to II by Boyz II Men"],
+ // "1996": ["R. Kelly with nickname 'the king of R&B' release 'I belive I can fly' and win 3 Grammy awards"],
+ // "2003": ["The music journalist Robert Christgau said 'Modern r&b isn't about discrete songs. It's about texture, mood, feel\u2014vocal and instrumental and rhythmic, articulated as they're smooshed together.'"]
+// }
 
 var GENRES = ["contemporary-rnb", "british-rnb", "alternative-rnb", "new-jack-swing-rnb", "new-orleans-rnb", "jump-blues", "blue-eyed-soul"];
 var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "liveness", "speechiness"];
 var INIT_YEAR = 1964;
 
 whenDocumentLoaded(() => {
-	$.getJSON("./rnb_data.json", function(json) {
+	// $.getJSON("./rnb_data.json", function(json) {
 		
-		var graph = new Graph(json, INFO);
-		console.log(json);
-		graph.redraw();
-		var slider = new Slider(INFO,graph);
-		slider.redraw()
-	});
+		// var graph = new Graph(json, INFO);
+		// console.log(json);
+		// graph.redraw();
+		// var slider = new Slider(INFO,graph);
+		// slider.redraw()
+	// });
+	
+	Promise.all([d3.json('./rnb_data.json'), d3.json('./rnb_keypoints.json')])
+		   .then(function(files) {
+			   var data = files[0];
+			   var info = files[1];
+			   var graph = new Graph(data, info);
+			   graph.redraw();
+			   var slider = new Slider(info, graph);
+			   slider.redraw()
+		   });
 });
 
 class Slider {
@@ -240,23 +250,37 @@ class Graph {
 		  .attr("xlink:href", "play.png")
 		  .attr("class", "play pointer");
 				
-		if (this.info[this.year] != undefined) {
-			this.svg.append("image")
-					.attr("xlink:href", "key.png")
-					.attr("x", this.xScale(1) - 10)
-					.attr("y", this.yScale(1) - 10)
-					.attr("width", 10)
-					.attr("height", 10)
-					.on("mouseover", mouseOverKey(this))
-					.on("mouseout", mouseOutKey(this));
-		
-		
-			this.infoDiv.selectAll("p")
-						.data(this.info[this.year])
-						.enter()
-						.append("p")
-						.text(d => d);
+		if (this.info[this.year] != undefined) {var card = this.infoDiv.selectAll("div")
+								  .data(this.info[this.year])
+								  .enter()
+								  .append("div")
+								  .attr("class", "card");
+			card.append("p").text(d => d.info);
+			card.append("a")
+				.attr("href", d => d.url)
+				.attr("target", "_blank")
+				.attr("rel", "noopener noreferrer")
+				.attr("class", "link")
+				.text("source");
 		}
+	}
+	
+	changeFeature(xy, i) {
+		if (xy == "x") {
+			this.xFeatureIndex = mod(this.xFeatureIndex + i, FEATURES.length);
+			this.xFeature = FEATURES[this.xFeatureIndex];
+			this.svg.select("text." + xy + ".label").text(this.xFeature);
+		} else if (xy == "y") {
+			this.yFeatureIndex = mod(this.yFeatureIndex + i, FEATURES.length);
+			this.yFeature = FEATURES[this.yFeatureIndex];		
+			this.svg.select("text." + xy + ".label").text(this.yFeature);
+		}
+		var gs = this.svg.selectAll("g.pointer");
+		console.log(this.xFeature);
+		gs.select("circle")
+		  .transition()
+		  .attr("cx", d => this.xScale(d[this.xFeature]))
+		  .attr("cy", d => this.yScale(d[this.yFeature]));
 	}
 	
 	drawAxis() {
@@ -296,16 +320,17 @@ class Graph {
 				.attr("x", this.xScale(0.3))
 				.attr("y", this.yScale(-0.05))
 				.attr("class", "axis label pointer fixed")
-				.text("◄")
-				.on("mouseover", d => console.log("YO"))
-				.on("click", d => changeFeature(this, "x", -1));
+				// <
+				.text("◀")
+				.on("click", d => this.changeFeature("x", -1));
 				
 		this.svg.append("text")
 				.attr("x", this.xScale(0.7))
 				.attr("y", this.yScale(-0.05))
 				.attr("class", "axis label pointer fixed")
-				.text("►")
-				.on("click", d => changeFeature(this, "x", 1));
+				// >
+				.text("▶")
+				.on("click", d => this.changeFeature("x", 1));
 				
 		// y changers
 		this.svg.append("text")
@@ -313,16 +338,18 @@ class Graph {
 				// .attr("x", this.xScale(-0.05))
 				// .attr("y", this.yScale(0.7))
 				.attr("class", "axis label pointer fixed")
-				.text("►")
-				.on("click", d => changeFeature(this, "y", 1));
+				// >
+				.text("▶")
+				.on("click", d => this.changeFeature("y", 1));
 				
 		this.svg.append("text")
 				.attr("transform", "translate(" + this.xScale(-0.05) + "," + this.yScale(0.3) + ") rotate(270)")
 				// .attr("x", this.xScale(-0.05))
 				// .attr("y", this.yScale(0.3))
 				.attr("class", "axis label pointer fixed")
-				.text("◄")
-				.on("click", d => changeFeature(this, "y", -1));
+				// <
+				.text("◀")
+				.on("click", d => this.changeFeature("y", -1));
 	}
 	
 	drawTitle() {		
@@ -335,7 +362,6 @@ class Graph {
 	
 	drawLegend() {
 		var genres = Array.from(new Set(this.data.filter(d => d.year == this.year).map(d => d.genre)));
-		console.log(genres);
 		this.svg.selectAll("dontknow")
 				.data(genres)
 				.enter()
@@ -360,58 +386,6 @@ class Graph {
 		this.reset();
 		this.redraw();
 	}
-}
-
-function changeFeature(graph, xy, i) {
-	if (xy == "x") {
-		graph.xFeatureIndex = mod(graph.xFeatureIndex + i, FEATURES.length);
-		graph.xFeature = FEATURES[graph.xFeatureIndex];
-		graph.svg.select("text." + xy + ".label").text(graph.xFeature);
-	} else if (xy == "y") {
-		graph.yFeatureIndex = mod(graph.yFeatureIndex + i, FEATURES.length);
-		graph.yFeature = FEATURES[graph.yFeatureIndex];		
-		graph.svg.select("text." + xy + ".label").text(graph.yFeature);
-	}
-	graph.reset();
-	graph.redraw();
-}
-
-function mouseOverKey(graph) {
-	// return function(d, i) {
-		// displayKeyPoint(d, i, graph, this);
-	// }
-	return function (d, i) {
-		graph.changeYear(2003);
-	}
-}
-
-function displayKeyPoint(d, i, graph, elem) {
-	var infoCard = graph.svg.selectAll("rect")
-						   .data(graph.info[graph.year])
-						   .enter();
-	
-	infoCard.append("rect")
-			.attr("x", graph.xScale(1) + 5)
-			.attr("y", (d, i) => i * 55)
-			.attr("class", "info-card");
-			
-	infoCard.append("text")
-			.attr("x", graph.xScale(1) + 5 + 5)
-			.attr("y", (d, i) => i * 55 + 10)
-			.attr("class", "info-card")
-			.text(d => d)
-			.call(wrap, 70);
-}
-
-function mouseOutKey(graph) {
-	return function(d, i) {
-		removeKeyPoint(d, i, graph, this);
-	}
-}
-
-function removeKeyPoint(d, i, graph, elem) {
-	graph.svg.selectAll(".info-card")
-			 .remove();
 }
 
 function mouseOverCircle(graph) {
@@ -545,39 +519,6 @@ function removeSongInfo(d, i, graph, elem) {
 	  .attr("xlink:href", "play.png")
 	  .attr("height", 0)
 	  .attr("width", 0);
-}
-
-function wrap(text, width) {
-    text.each(function () {
-        var text = d3.select(this),
-            words = text.text().split(" ").reverse(),
-            word,
-            line = [],
-            lineNumber = 0,
-            lineHeight = 1.1, // ems
-            x = text.attr("x"),
-            y = text.attr("y"),
-            dy = 0, //parseFloat(text.attr("dy")),
-            tspan = text.text(null)
-                        .append("tspan")
-                        .attr("x", x)
-                        .attr("y", y)
-                        .attr("dy", dy + "em");
-        while (word = words.pop()) {
-            line.push(word);
-            tspan.text(line.join(" "));
-            if (tspan.node().getComputedTextLength() > width) {
-                line.pop();
-                tspan.text(line.join(" "));
-                line = [word];
-                tspan = text.append("tspan")
-                            .attr("x", x)
-                            .attr("y", y)
-                            .attr("dy", ++lineNumber * lineHeight + dy + "em")
-                            .text(word);
-            }
-        }
-    });
 }
 
 function cut(text, width) {
