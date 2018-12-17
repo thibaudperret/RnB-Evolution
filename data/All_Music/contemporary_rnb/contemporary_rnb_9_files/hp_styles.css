@@ -1,0 +1,87 @@
+/*=============================
+=            Reset            =
+=============================*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del, dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,
+legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure, footer,header,menu,nav,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-family: sans-serif;
+}
+#banner{
+	transform-origin: 0 0;
+	-ms-transform-origin: 0 0;  
+	-webkit-transform-origin: 0 0;
+	/*Retina*/
+	cursor: pointer;
+	display: block;
+	background-color: white;
+	position: relative;
+	/* Banner width */
+	width: 970px;
+	/* Banner height */
+	height: 250px;
+	/* auf Dimension maskieren */
+	overflow: hidden;
+	box-sizing: border-box;
+	display: none;
+}
+.smoothAni{
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000px;
+}
+.banner_element{
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	margin: 0px;
+	padding:0px;
+}
+/* Custom CSS goes here */
+#banner_Logo{
+	background-image: url('links/logo.png');
+	background-repeat: no-repeat;
+}
+#banner_Border{
+	background-image: url('links/border.png');
+	background-repeat: no-repeat;
+}
+#banner_Copy1{
+	background-image: url('links/copy1.png');
+	background-repeat: no-repeat;
+}
+#banner_Copy2{
+	background-image: url('links/copy2.png');
+	background-repeat: no-repeat;
+}
+#banner_Copy3{
+	background-image: url('links/copy3.png');
+	background-repeat: no-repeat;
+}
+#banner_Relax{
+	background-image: url('links/relax.png');
+	background-repeat: no-repeat;
+}
+#banner_cta_black{
+	background-image: url('links/cta.png');
+	background-repeat: no-repeat;
+	background-position: 0px -23px;
+}
+#banner_cta_color{
+	background-image: url('links/cta.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#banner_ImgLoad{
+	background-image: url('links/image.jpg');
+	background-repeat: no-repeat;
+}
+#video1 {
+	position: absolute;
+	width: 860px;
+	height: 230px;
+}

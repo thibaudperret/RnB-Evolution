@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0193)https://s0.2mdn.net/ads/richmedia/studio/pv2/60917278/20181114070947790/MINI_BLACKYARD_Billboard_970x250_FR_branding_v2/index.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=XWGiLzVLnO&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>MINI_BLACKYARD_Billboard_970x250_FR_branding_2</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="./hp_styles.css">
+	<script src="./createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js"></script>
+	<script src="./tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+	<script src="./Enabler_01_231.js"></script>
+<script type="text/javascript" charset="UTF-8" src="./prod_studio_01_231_videomodule.js"></script></head>
+	<body>
+		<div id="banner" style="display: block;">
+			<div id="banner_Logo" class="banner_element" style="opacity: 1; height: 250px; width: 970px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="banner_Border" class="banner_element" style="opacity: 1; height: 250px; width: 970px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="banner_Copy1" class="banner_element" style="opacity: 0; height: 250px; width: 970px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="banner_Copy2" class="banner_element" style="opacity: 0; height: 250px; width: 970px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="banner_Copy3" class="banner_element" style="opacity: 1; height: 250px; width: 970px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="banner_ctaBox" class="banner_element" style="opacity: 1; height: 23px; width: 154px; transform: matrix(1, 0, 0, 1, 635, 216);">
+				<div id="banner_cta_black" class="banner_element" style="opacity: 1; height: 23px; width: 154px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+				<div id="banner_cta_color" class="banner_element" style="opacity: 1; height: 23px; width: 154px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			</div>
+			<div id="banner_ImgBox" class="banner_element" style="opacity: 1; height: 230px; width: 615px; transform: matrix(1, 0, 0, 1, 10, 10);">
+				<video id="video1" autoplay="" poster="links/image.jpg" muted="" style="opacity: 1; transform: matrix(1, 0, 0, 1, -225, 0);">
+					<source type="video/mp4" src="//gcdn.2mdn.net/videoplayback/id/3129bf2588856f35/itag/15/source/doubleclick/ratebypass/yes/mime/video%2Fmp4/acao/yes/ip/0.0.0.0/ipbits/0/expire/3686656153/sparams/id,itag,source,ratebypass,mime,acao,ip,ipbits,expire/signature/B9CC27C3F980EDC5E18141765C8D9F1E2F48103B.8786057B394E3701F236BFB143317F06144161CE/key/ck2/file/file.mp4">
+				</video>
+				<div id="banner_ImgLoad" class="banner_element"></div>
+			<div id="banner_decker" class="banner_element" style="background-color: rgb(0, 0, 0); opacity: 1; height: 230px; width: 10px; right: 0px;"></div>
+			</div>
+			<div id="banner_Relax" class="banner_element" style="opacity: 1; height: 250px; width: 970px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				if (Enabler.isInitialized()) {
+					enablerInitHandler();
+				} else {
+					Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+				}
+			};
+			function enablerInitHandler() {
+				//initElements();
+			}
+			function bgExitHandler(e) {
+				Enabler.exit('Background Exit');
+			}
+			document.getElementById('banner').addEventListener('click', bgExitHandler, false);
+
+
+			var video = document.getElementById('video1');
+
+			Enabler.loadModule(studio.module.ModuleId.VIDEO, function() {
+				studio.video.Reporter.attach('video1', video1);
+			});
+
+		</script>
+		<script src="./hp_main.js"></script>
+	
+</body></html>
