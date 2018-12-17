@@ -166,7 +166,7 @@ text.song-name {
 
 rect#track {
 	fill:blue;
-	stroke:pink;
+	stroke:black;
 	stroke-width:5;
 	fill-opacity:0.1;
 	stroke-opacity:0.9;
@@ -179,9 +179,6 @@ rect#thumb {
 }
 
 circle.timeline_year{
-	fill-opacity:0.7;
-	stroke:black;
-	stroke-width:1;
 	pointer-events: none;
 }
 

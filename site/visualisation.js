@@ -99,9 +99,9 @@ class Slider {
 				.attr("cx", d => this.scale(d)) 
 				.attr("cy", 50)
 				.attr("r", 10)
-				.attr("fill","red")
+				.attr("fill","url(#image2)")
 				.filter(d => d == this.year)
-				.attr("fill", "blue");
+				.attr("fill", "url(#image1)");
 	}
 	
 	redrawThumb(year) {
@@ -178,7 +178,9 @@ class Slider {
 	}
 		
 	clickTrack(){
-		var newyear = Math.round(this.scaleinv(d3.event.offsetX));
+		var coordinates= d3.mouse(this.svg.node());
+		var x = coordinates[0];
+		var newyear = Math.round(this.scaleinv(x));
 		this.changeYear(newyear);
 			
 	}
@@ -187,9 +189,9 @@ class Slider {
 		this.svg.select("#thumb").attr("x", this.scale(newyear)-5)
 		this.svg.selectAll("circle.timeline_year")
 				.data(Object.keys(this.data))
-				.attr("fill", "red")
+				.attr("fill","url(#image2)")
 				.filter(d => d == newyear)
-				.attr("fill", "blue");
+				.attr("fill","url(#image1)");
 				
 		if (newyear != this.year) {
 			this.year = newyear;
