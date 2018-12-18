@@ -13,7 +13,7 @@ div.right {
 	width: 20%;
 	margin-left: 20px;
 	padding: 50px 20px 0px 20px;
-	background-color: #ffd5e5;
+	background-color: #eee;
 	box-shadow: 0px 1px 4px rgba(0, 0, 0, .2);
 }
 
@@ -35,6 +35,13 @@ text {
 	cursor: default;
 }
 
+img.info-vinyl {
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin-bottom: 5px;
+}
+
 .card {
 	font-family: 'Open Sans', sans-serif;
 	margin: 15px 5px;
@@ -46,6 +53,13 @@ text {
 
 .card p {
 	text-align: justify;
+	clear: left;
+}
+
+p.no-info {
+	text-align: justify;
+	font-style: italic;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .card a {
@@ -165,10 +179,9 @@ text.song-name {
 }
 
 rect#track {
-	fill:blue;
+	fill: #eee;
 	stroke:black;
 	stroke-width:5;
-	fill-opacity:0.1;
 	stroke-opacity:0.9;
 }
 
