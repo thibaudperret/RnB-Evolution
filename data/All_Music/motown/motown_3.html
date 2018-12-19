@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- saved from url=(0040)https://www.allmusic.com/advanced-search -->
-<html class=" js "><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./motown_3_files/37e6a77380"></script><script src="./motown_3_files/nr-1099.min.js"></script><script type="text/javascript" async="" src="./motown_3_files/ga.js"></script><script async="" src="./motown_3_files/apstag.js"></script>
+<html class=" js "><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><script src="./motown_3_files/f(11).txt"></script><script src="./motown_3_files/ads.min.js"></script><script src="./motown_3_files/measure.min.js"></script><script type="text/javascript" async="" src="./motown_3_files/px.js"></script><script src="./motown_3_files/rules-p-59TntzuqummDw.js" async=""></script><script type="text/javascript" async="" src="./motown_3_files/ctoolbar.min.js"></script><script async="" src="./motown_3_files/beacon.js"></script><script src="./motown_3_files/pubads_impl_rendering_285.js"></script><script id="smb-vidad-js" async="" src="./motown_3_files/smb-vidad.js"></script><script src="./motown_3_files/cmp.js" async="" type="text/javascript"></script><script src="./motown_3_files/quant.js" async="" type="text/javascript"></script><script src="./motown_3_files/cmnUNT.js" type="text/javascript" async=""></script><script async="" type="text/javascript" src="./motown_3_files/gpt.js"></script><script async="" src="./motown_3_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><script type="text/javascript" src="./motown_3_files/37e6a77380"></script><script src="./motown_3_files/nr-1099.min.js"></script><script src="./motown_3_files/ads.min.js"></script><script src="./motown_3_files/measure.min.js"></script><script type="text/javascript" async="" src="./motown_3_files/px.js"></script><script src="./motown_3_files/rules-p-59TntzuqummDw.js" async=""></script><script type="text/javascript" async="" src="./motown_3_files/ctoolbar.min.js"></script><script async="" src="./motown_3_files/beacon.js"></script><script src="./motown_3_files/f(4).txt"></script><script src="./motown_3_files/pubads_impl_rendering_285.js"></script><script id="smb-vidad-js" async="" src="./motown_3_files/smb-vidad.js"></script><script type="text/javascript" async="" src="./motown_3_files/ga.js"></script><script async="" src="./motown_3_files/apstag.js"></script><script src="./motown_3_files/cmp.js" async="" type="text/javascript"></script><script src="./motown_3_files/quant.js" async="" type="text/javascript"></script><script src="./motown_3_files/cmnUNT.js" type="text/javascript" async=""></script><script async="" type="text/javascript" src="./motown_3_files/gpt.js"></script><script async="" src="./motown_3_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
 
     <meta http-equiv="content-language" content="en-us">
 
@@ -284,7 +284,7 @@ googletag.cmd.push(function(){
         border-color: #0e76bc !important;
     }
 </style>
-<link rel="preload" href="./motown_3_files/f(12).txt" as="script"><script type="text/javascript" src="./motown_3_files/f(12).txt"></script><link rel="preload" href="./motown_3_files/f(13).txt" as="script"><script type="text/javascript" src="./motown_3_files/f(13).txt"></script><script src="./motown_3_files/pubads_impl_285.js" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-31/html/container.html"><style type="text/css">#fdbk_overlay {
+<link rel="preload" href="./motown_3_files/f(5).txt" as="script"><script type="text/javascript" src="./motown_3_files/f(5).txt"></script><link rel="preload" href="./motown_3_files/f(6).txt" as="script"><script type="text/javascript" src="./motown_3_files/f(6).txt"></script><script src="./motown_3_files/pubads_impl_285.js" async=""></script><script async="" src="./motown_3_files/184233-278587170399516.js"></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-31/html/container.html"><link id="smb-fonts" href="./motown_3_files/css" type="text/css" rel="stylesheet"><link id="smb-vidad-select-style" href="./motown_3_files/select.css" type="text/css" rel="stylesheet"><link id="smb-vidad-style" href="./motown_3_files/smb-vidad.css" type="text/css" rel="stylesheet"><script id="__smbcfgldr22106" src="./motown_3_files/allmusic" type="text/javascript" async=""></script><script id="smb-googtag" src="./motown_3_files/gpt.js" type="text/javascript" async=""></script><script id="smb-prebid" src="./motown_3_files/smb-prebid.js" type="text/javascript" async=""></script><script id="__smbldr241943" src="./motown_3_files/partner-status" type="text/javascript" async=""></script><script id="googleAnalytics" src="./motown_3_files/analytics.js" type="text/javascript" async=""></script><style type="text/css">#fdbk_overlay {
   width: 100%;
   height: 100%;
   top: 0;
@@ -380,7 +380,7 @@ a#fdbk_close {
 
 .feedback_tab_on embed, .feedback_tab_on select, .feedback_tab_on object {
   visibility: hidden; }
-</style><script src="./motown_3_files/supply"></script><link id="smb-fonts" href="./motown_3_files/css" type="text/css" rel="stylesheet"><link id="smb-vidad-select-style" href="./motown_3_files/select.css" type="text/css" rel="stylesheet"><link id="smb-vidad-style" href="./motown_3_files/smb-vidad.css" type="text/css" rel="stylesheet"><script id="__smbcfgldr400735" src="./motown_3_files/allmusic" type="text/javascript" async=""></script><script id="smb-googtag" src="./motown_3_files/gpt.js" type="text/javascript" async=""></script><script id="smb-prebid" src="./motown_3_files/smb-prebid.js" type="text/javascript" async=""></script><script id="__smbldr381720" src="./motown_3_files/partner-status" type="text/javascript" async=""></script><script id="googleAnalytics" src="./motown_3_files/analytics.js" type="text/javascript" async=""></script><script async="" src="./motown_3_files/184233-278587170399516.js"></script><style type="text/css">#cmn_ad_tag_head, #cmn_ad_tag_head div, #cmn_ad_tag_head table, #cmn_ad_tag_head table td {margin: 0 auto; text-align:center;}</style><script src="./motown_3_files/fire.js"></script><link type="text/css" rel="stylesheet" href="./motown_3_files/ctoolbar.desktop.min.css"><script type="text/javascript" charset="UTF-8" src="./motown_3_files/PreEngine_desktop_2018-12-17T12_55_48.410" crossorigin="anonymous"></script><script type="text/javascript" charset="UTF-8" src="./motown_3_files/middy-desktop-1.6.0.js" crossorigin="anonymous"></script></head>
+</style><style type="text/css">#cmn_ad_tag_head, #cmn_ad_tag_head div, #cmn_ad_tag_head table, #cmn_ad_tag_head table td {margin: 0 auto; text-align:center;}</style><script src="./motown_3_files/supply"></script><script src="./motown_3_files/fire.js"></script><link type="text/css" rel="stylesheet" href="./motown_3_files/ctoolbar.desktop.min.css"><script type="text/javascript" charset="UTF-8" src="./motown_3_files/PreEngine_desktop_2018-12-17T12_55_48.410" crossorigin="anonymous"></script><script type="text/javascript" charset="UTF-8" src="./motown_3_files/middy-desktop-1.6.0.js" crossorigin="anonymous"></script></head>
 <body>
 <noscript>
     <div class="javascript-disabled" id="no-js">
@@ -388,15 +388,15 @@ a#fdbk_close {
         Please enable JavaScript in your browser to use the site fully.
     </div>
 </noscript>
-<div class="stripe-container header-leaderboard" style="margin-bottom: 50px;">
+<div class="stripe-container header-leaderboard" style="margin-bottom: 0px;">
     <div class="advertising leaderboard">
-                    <div id="cmn_ad_tag_head" class="fw_allmusic"><div id="complex_leaderboard_header" data-cmnunt-ad-size="3x3" data-google-query-id="CIOPnumvp98CFcOxewodlMsIrA" style="text-align: center;"><div id="google_ads_iframe_/5202/allmusic/discover_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5202/allmusic/discover_0" title="3rd party ad content" name="google_ads_iframe_/5202/allmusic/discover_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom; margin: 0px auto;" data-google-container-id="3" data-load-complete="true" src="./motown_3_files/saved_resource(4).html"></iframe></div></div></div>            </div>
+                    <div id="cmn_ad_tag_head" class="fw_allmusic"><div id="complex_leaderboard_header" data-cmnunt-ad-size="3x3" data-google-query-id="CKzMpYSfrN8CFQ6-dwod8VsLNQ" style="text-align: center;"><div id="google_ads_iframe_/5202/allmusic/discover_2__container__" style="border: 0pt none; display: inline-block; width: 970px; height: 250px;"><iframe frameborder="0" src="./motown_3_files/container.html" id="google_ads_iframe_/5202/allmusic/discover_2" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="970" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="3" style="border: 0px; vertical-align: bottom; margin: 0px auto;" data-load-complete="true"></iframe></div></div></div>            </div>
 </div>
 
 <div class="overflow-container advanced-search">
 
-<div class="stripe-container header-main-nav clearfix fixed">
-    <div class="max-header fixed">
+<div class="stripe-container header-main-nav clearfix">
+    <div class="max-header">
         <div class="main-nav">
 
     <div class="logo-container">
@@ -410,7 +410,7 @@ a#fdbk_close {
     <div class="search-container" style="width: 239px;">
         <form class="site-search" method="post" name="site-search" action="https://www.allmusic.com/search">
             <input type="submit" class="site-search-button" name="submit">
-            <input type="search" class="site-search-input" name="term" placeholder="Search" tabindex="1" autocomplete="off" style="width: 197px;"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 39px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div><div class="see-all"></div></div>
+            <input type="search" class="site-search-input" name="term" placeholder="Search" tabindex="1" autocomplete="off" style="width: 197px;"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 53px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div><div class="see-all"></div></div>
         </form>
     </div>
 
@@ -449,6 +449,11 @@ a#fdbk_close {
                     </a>
                 </div>
                             <div class="subnav_new_release_album">
+                    <a href="https://www.allmusic.com/album/icarus-falls-mw0003232854" title="ZAYN - Icarus Falls">
+                        <img src="./motown_3_files/0004984591.jpg" alt="ZAYN - Icarus Falls">
+                    </a>
+                </div>
+                            <div class="subnav_new_release_album">
                     <a href="https://www.allmusic.com/album/live-on-wlir-mw0003223598" title="Big Star - Live on WLIR">
                         <img src="./motown_3_files/image(1).jpg" alt="Big Star - Live on WLIR">
                     </a>
@@ -471,11 +476,6 @@ a#fdbk_close {
                             <div class="subnav_new_release_album">
                     <a href="https://www.allmusic.com/album/moment-mw0003219156" title="Gudrun Gut - Moment">
                         <img src="./motown_3_files/image(5).jpg" alt="Gudrun Gut - Moment">
-                    </a>
-                </div>
-                            <div class="subnav_new_release_album">
-                    <a href="https://www.allmusic.com/album/electric-trim-live-at-rough-trade-east-mw0003224453" title="Lee Ranaldo - Electric Trim Live at Rough Trade East">
-                        <img src="./motown_3_files/image(6).jpg" alt="Lee Ranaldo - Electric Trim Live at Rough Trade East">
                     </a>
                 </div>
                         </div>
@@ -715,6 +715,12 @@ a#fdbk_close {
     </div>
     <div class="subnav-blog-articles-row">
                                     <div class="subnav-blog-article">
+                    <a href="https://www.allmusic.com/blog/post/the-2018-allmusic-gift-guide-week-four"><img src="./motown_3_files/blog_giftguide2018_week4__medium.jpg"></a>
+                    <a href="https://www.allmusic.com/blog/post/the-2018-allmusic-gift-guide-week-four"><div class="subnav-blog-caption" style="display:none;">
+                        <div class="inner-text">The 2018 AllMusic Gift Guide: ‘The Yacht Roc…</div>
+                    </div></a>
+                </div>
+                            <div class="subnav-blog-article">
                     <a href="https://www.allmusic.com/blog/post/allmusic-loves-2018"><img src="./motown_3_files/social_best2018_loves2018__medium.jpg"></a>
                     <a href="https://www.allmusic.com/blog/post/allmusic-loves-2018"><div class="subnav-blog-caption" style="display:none;">
                         <div class="inner-text">AllMusic Loves 2018</div>
@@ -730,12 +736,6 @@ a#fdbk_close {
                     <a href="https://www.allmusic.com/blog/post/the-2018-allmusic-readers-poll"><img src="./motown_3_files/social_best2018_readerspoll__medium.jpg"></a>
                     <a href="https://www.allmusic.com/blog/post/the-2018-allmusic-readers-poll"><div class="subnav-blog-caption" style="display:none;">
                         <div class="inner-text">Cast Your Vote in the 2018 AllMusic Readers’…</div>
-                    </div></a>
-                </div>
-                            <div class="subnav-blog-article">
-                    <a href="https://www.allmusic.com/blog/post/best-of-2018"><img src="./motown_3_files/blog_best2018__medium.jpg"></a>
-                    <a href="https://www.allmusic.com/blog/post/best-of-2018"><div class="subnav-blog-caption" style="display:none;">
-                        <div class="inner-text">Best of 2018</div>
                     </div></a>
                 </div>
                         </div>
@@ -8682,10 +8682,10 @@ a#fdbk_close {
                             <label for="genreid:MA0000002809">
                                 R&amp;B                            </label>
 
-                            <a class="expand-collapse expanded" data-id="genreid:MA0000002809">[-]</a>
+                            <a class="expand-collapse" data-id="genreid:MA0000002809">[+]</a>
                         </li>
 
-                                                <li class="style" data-parent="genreid:MA0000002809" data-text-filter="adult contemporary r&amp;b" style="display: list-item;">
+                                                <li class="style" data-parent="genreid:MA0000002809" data-text-filter="adult contemporary r&amp;b">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012131" value="Adult Contemporary R&amp;B">
 
@@ -8693,7 +8693,7 @@ a#fdbk_close {
                                 Adult Contemporary R&amp;B                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="alternative r&amp;b" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="alternative r&amp;b">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000013375" value="Alternative R&amp;B">
 
@@ -8701,7 +8701,7 @@ a#fdbk_close {
                                 Alternative R&amp;B                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="beach" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="beach">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012034" value="Beach">
 
@@ -8709,7 +8709,7 @@ a#fdbk_close {
                                 Beach                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="blue-eyed soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="blue-eyed soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012036" value="Blue-Eyed Soul">
 
@@ -8717,7 +8717,7 @@ a#fdbk_close {
                                 Blue-Eyed Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="brown-eyed soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="brown-eyed soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012297" value="Brown-Eyed Soul">
 
@@ -8725,7 +8725,7 @@ a#fdbk_close {
                                 Brown-Eyed Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="chicago soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="chicago soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002509" value="Chicago Soul">
 
@@ -8733,15 +8733,15 @@ a#fdbk_close {
                                 Chicago Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="contemporary r&amp;b" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="contemporary r&amp;b">
 
-                            <input type="checkbox" name="genre" id="subgenreid:MA0000002969" value="Contemporary R&amp;B" checked="checked">
+                            <input type="checkbox" name="genre" id="subgenreid:MA0000002969" value="Contemporary R&amp;B">
 
                             <label for="subgenreid:MA0000002969">
                                 Contemporary R&amp;B                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="country soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="country soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000011895" value="Country Soul">
 
@@ -8749,7 +8749,7 @@ a#fdbk_close {
                                 Country Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="deep funk" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="deep funk">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000011931" value="Deep Funk">
 
@@ -8757,7 +8757,7 @@ a#fdbk_close {
                                 Deep Funk                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="deep funk revival" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="deep funk revival">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012271" value="Deep Funk Revival">
 
@@ -8765,7 +8765,7 @@ a#fdbk_close {
                                 Deep Funk Revival                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="deep soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="deep soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000011850" value="Deep Soul">
 
@@ -8773,7 +8773,7 @@ a#fdbk_close {
                                 Deep Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="disco" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="disco">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002552" value="Disco">
 
@@ -8781,7 +8781,7 @@ a#fdbk_close {
                                 Disco                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="doo wop" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="doo wop">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002556" value="Doo Wop">
 
@@ -8789,7 +8789,7 @@ a#fdbk_close {
                                 Doo Wop                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="early r&amp;b" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="early r&amp;b">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002520" value="Early R&amp;B">
 
@@ -8797,7 +8797,7 @@ a#fdbk_close {
                                 Early R&amp;B                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="freestyle" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="freestyle">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002599" value="Freestyle">
 
@@ -8805,7 +8805,7 @@ a#fdbk_close {
                                 Freestyle                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="funk" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="funk">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002606" value="Funk">
 
@@ -8813,7 +8813,7 @@ a#fdbk_close {
                                 Funk                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="go-go" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="go-go">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000004428" value="Go-Go">
 
@@ -8821,7 +8821,7 @@ a#fdbk_close {
                                 Go-Go                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="memphis soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="memphis soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012120" value="Memphis Soul">
 
@@ -8829,15 +8829,15 @@ a#fdbk_close {
                                 Memphis Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="motown" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="motown">
 
-                            <input type="checkbox" name="genre" id="subgenreid:MA0000002735" value="Motown" data-filter-id="subgenreid:MA0000002735">
+                            <input type="checkbox" name="genre" id="subgenreid:MA0000002735" value="Motown" checked="checked" data-filter-id="subgenreid:MA0000002735">
 
                             <label for="subgenreid:MA0000002735">
                                 Motown                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="neo-soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="neo-soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000004426" value="Neo-Soul">
 
@@ -8845,7 +8845,7 @@ a#fdbk_close {
                                 Neo-Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="new jack swing" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="new jack swing">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000005027" value="New Jack Swing">
 
@@ -8853,7 +8853,7 @@ a#fdbk_close {
                                 New Jack Swing                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="new orleans r&amp;b" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="new orleans r&amp;b">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002747" value="New Orleans R&amp;B">
 
@@ -8861,7 +8861,7 @@ a#fdbk_close {
                                 New Orleans R&amp;B                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="northern soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="northern soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000004427" value="Northern Soul">
 
@@ -8869,7 +8869,7 @@ a#fdbk_close {
                                 Northern Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="philly soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="philly soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002776" value="Philly Soul">
 
@@ -8877,7 +8877,7 @@ a#fdbk_close {
                                 Philly Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="pop-soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="pop-soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000011870" value="Pop-Soul">
 
@@ -8885,7 +8885,7 @@ a#fdbk_close {
                                 Pop-Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="post-disco" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="post-disco">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012124" value="Post-Disco">
 
@@ -8893,7 +8893,7 @@ a#fdbk_close {
                                 Post-Disco                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="psychedelic soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="psychedelic soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000005025" value="Psychedelic Soul">
 
@@ -8901,7 +8901,7 @@ a#fdbk_close {
                                 Psychedelic Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="quiet storm" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="quiet storm">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000004425" value="Quiet Storm">
 
@@ -8909,7 +8909,7 @@ a#fdbk_close {
                                 Quiet Storm                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="retro-soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="retro-soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000011953" value="Retro-Soul">
 
@@ -8917,7 +8917,7 @@ a#fdbk_close {
                                 Retro-Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="smooth soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="smooth soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000011955" value="Smooth Soul">
 
@@ -8925,7 +8925,7 @@ a#fdbk_close {
                                 Smooth Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002865" value="Soul">
 
@@ -8933,7 +8933,7 @@ a#fdbk_close {
                                 Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="southern soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="southern soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000002877" value="Southern Soul">
 
@@ -8941,7 +8941,7 @@ a#fdbk_close {
                                 Southern Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="uptown soul" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="uptown soul">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000012166" value="Uptown Soul">
 
@@ -8949,7 +8949,7 @@ a#fdbk_close {
                                 Uptown Soul                            </label>
 
                         </li>
-                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="urban" style="display: list-item;">
+                                            <li class="style" data-parent="genreid:MA0000002809" data-text-filter="urban">
 
                             <input type="checkbox" name="genre" id="subgenreid:MA0000011965" value="Urban">
 
@@ -10102,21 +10102,21 @@ a#fdbk_close {
             <div class="options">
                 <ul>
                                             <li>
-                            <input type="checkbox" name="rating" id="editorialrating:9" value="5 Stars" checked="checked" data-filter-id="editorialrating:9">
+                            <input type="checkbox" name="rating" id="editorialrating:9" value="5 Stars" checked="checked">
 
                             <label for="editorialrating:9">
                                 5 Stars                                <span class="allmusic-rating rating-allmusic-9"></span>
                             </label>
                         </li>
                                             <li>
-                            <input type="checkbox" name="rating" id="editorialrating:8" value="4½ Stars" checked="checked" data-filter-id="editorialrating:8">
+                            <input type="checkbox" name="rating" id="editorialrating:8" value="4½ Stars" checked="checked">
 
                             <label for="editorialrating:8">
                                 4½ Stars                                <span class="allmusic-rating rating-allmusic-8"></span>
                             </label>
                         </li>
                                             <li>
-                            <input type="checkbox" name="rating" id="editorialrating:7" value="4 Stars" checked="checked" data-filter-id="editorialrating:7">
+                            <input type="checkbox" name="rating" id="editorialrating:7" value="4 Stars" checked="checked">
 
                             <label for="editorialrating:7">
                                 4 Stars                                <span class="allmusic-rating rating-allmusic-7"></span>
@@ -13641,29 +13641,92 @@ a#fdbk_close {
     <div class="tab-content">
         <div class="options">
             <p>
-                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 39px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div></div>
+                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="position: absolute; top: 53px; left: 976.2px; display: none;"><div class="typeahead-results">            <section class="artist-results">
+
+            
+            <ul>
+                                                            <li class="result" data-id="MN0000892827" data-text="The Notorious B.I.G." data-url="/artist/the-notorious-big-mn0000892827">
+
+                            <p class="name">
+                                The Notorious B.I.G.                            </p>
+
+                                                                <p class="genres">
+                                        Rap                                    </p>
+                                                                                    </li>
+                                                                                <li class="result" data-id="MN0000407544" data-text="The Not" data-url="/artist/the-not-mn0000407544">
+
+                            <p class="name">
+                                The Not                            </p>
+
+                                                                <p class="genres">
+                                        Pop/Rock                                    </p>
+                                                                                    </li>
+                                                                                <li class="result" data-id="MN0001531760" data-text="Not" data-url="/artist/not-mn0001531760">
+
+                            <p class="name">
+                                Not                            </p>
+
+                                                                <p class="genres">
+                                        International                                    </p>
+                                                                                    </li>
+                                                                                <li class="result" data-id="MN0001822122" data-text="Not" data-url="/artist/not-mn0001822122">
+
+                            <p class="name">
+                                Not                            </p>
+
+                                                                <p class="genres">
+                                        Rap                                    </p>
+                                                                                    </li>
+                                                                                <li class="result" data-id="MN0001944648" data-text="Not" data-url="/artist/not-mn0001944648">
+
+                            <p class="name">
+                                Not                            </p>
+
+                                                                <p class="genres">
+                                        Pop/Rock                                    </p>
+                                                                                    </li>
+                                                                                <li class="result" data-id="MN0000817011" data-text="Was (Not Was)" data-url="/artist/was-not-was-mn0000817011">
+
+                            <p class="name">
+                                Was (Not Was)                            </p>
+
+                                                                <p class="genres">
+                                        Pop/Rock, R&amp;B                                    </p>
+                                                                                    </li>
+                                                                                <li class="result" data-id="MN0000665957" data-text="Harold Melvin &amp; the Blue Notes" data-url="/artist/harold-melvin-the-blue-notes-mn0000665957">
+
+                            <p class="name">
+                                Harold Melvin &amp; the Blue Notes                            </p>
+
+                                                                <p class="genres">
+                                        R&amp;B                                    </p>
+                                                                                    </li>
+                                                </ul>
+        </section>
+    
+</div></div>
                 <span class="clear">x</span>
             </p>
 
             <p class="hidden">
-                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 39px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div></div>
+                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 53px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div></div>
                 <span class="clear">x</span>
             </p>
 
             <p class="hidden">
-                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 39px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div></div>
+                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 53px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div></div>
                 <span class="clear">x</span>
             </p>
 
             <p class="hidden">
-                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 39px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div></div>
+                <input type="text" placeholder="type to filter artists by name" value="" autocomplete="off"><div class="allmusic-typeahead" style="display: none; position: absolute; top: 53px; left: 976.2px;"><div class="typeahead-results searching"><span class="typeahead-searching-msg" style=""><h3 style="color:#A9A9A9;">Searching<span class="dots"></span></h3></span></div></div>
                 <span class="clear">x</span>
             </p>
         </div>
     </div>
 </section>
                 <div class="advertising medium-rectangle medium-rectangle-btf">
-            <div class="complex_square" id="complex_square_btf" data-cmnunt-ad-size="300x250,300x600" data-google-query-id="CJmYiISwp98CFRWR3godcSUDfQ" style="display: none;"><div id="google_ads_iframe_/5202/allmusic/discover_3__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5202/allmusic/discover_3" title="3rd party ad content" name="google_ads_iframe_/5202/allmusic/discover_3" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" src="./motown_3_files/saved_resource(5).html"></iframe></div></div>        </div>
+            <div class="complex_square" id="complex_square_btf" data-cmnunt-ad-size="300x250,300x600" data-google-query-id="CI_4koWfrN8CFQ8s4AodRRIGCg" style="display: none;"><div id="google_ads_iframe_/5202/allmusic/discover_1__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5202/allmusic/discover_1" title="3rd party ad content" name="google_ads_iframe_/5202/allmusic/discover_1" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" src="./motown_3_files/saved_resource.html"></iframe></div></div>        </div>
         <div class="saambaa_small_video">
             <!-- BEGIN SAAMBAA VIDEO AD --><div id="smb-vidad-widget" class="smb-vidad saambaa_small" data-smb-partner-id="allmusic" data-smb-vid-player="nhI3wNRn" data-src="//allmusic.saambaa.com/partner/valg/allmusic"></div><script> (function(d, s, id) { var js,ejs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.async = true; js.src = '//saambaa.com/widget/va/jw/assets/smb-vidad.js'; ejs.parentNode.insertBefore(js, ejs); }(document, 'script', 'smb-vidad-js')); </script><!-- END SAAMBAA VIDEO AD -->        </div>
         
@@ -13678,1924 +13741,19 @@ a#fdbk_close {
                 <span class="logic-toggle"><a href="https://www.allmusic.com/advanced-search#" class="and-logic">and</a> / <a href="https://www.allmusic.com/advanced-search#" class="or-logic">or</a></span>
             </header>
 
-            <div class="query"><a href="https://www.allmusic.com/advanced-search#" data-filter-id="subgenreid:MA0000002735">Motown</a> <em>and</em> ( <a href="https://www.allmusic.com/advanced-search#" data-filter-id="editorialrating:9">5 Stars</a> or <a href="https://www.allmusic.com/advanced-search#" data-filter-id="editorialrating:8">4½ Stars</a> or <a href="https://www.allmusic.com/advanced-search#" data-filter-id="editorialrating:7">4 Stars</a> )</div>
+            <div class="query"><a href="https://www.allmusic.com/advanced-search#" data-filter-id="subgenreid:MA0000002735">Motown</a></div>
 
             <div class="mobile-clear-all"><a href="https://www.allmusic.com/advanced-search#" class="clear-all-filters">Clear All Filters</a></div>
         </section>
 
-        <section class="results">    <div class="desktop-results">
-        <table>
-            <thead>
-            <tr>
-                <th class="cover"></th>
-                <th class="year sortable " data-sort-default="asc">
-                    <a href="https://www.allmusic.com/advanced-search#">Year</a>
-                </th>
-                <th class="artist">Artist</th>
-                <th class="title sortable " data-sort-default="asc">
-                    <a href="https://www.allmusic.com/advanced-search#">Album</a>
-                </th>
-                <th class="rating sortable " data-sort-default="desc">
-                    <a href="https://www.allmusic.com/advanced-search#">AllMusic Rating</a>
-                </th>
-            </tr>
-            </thead>
-
-            <tbody>
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-1997-mw0000644365" title="The Ultimate Collection [1997]">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/074/MI0000074155.jpg?partner=allrovi.com" width="56" height="56" alt="The Ultimate Collection [1997]" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/074/MI0000074155.jpg?partner=allrovi.com" width="56" height="56" alt="The Ultimate Collection [1997]" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1997                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-ultimate-collection-1997-mw0000644365">The Ultimate Collection [1997]</a>
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-1997-mw0000644365" title="The Ultimate Collection [1997]">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0002300761" title="The Ultimate Collection">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0004/091/MI0004091368.jpg?partner=allrovi.com" width="56" height="57" alt="The Ultimate Collection" style="top: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0004/091/MI0004091368.jpg?partner=allrovi.com" width="56" height="57" alt="The Ultimate Collection" style="top:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1997                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/diana-ross-mn0000594665">Diana Ross</a> / <a href="https://www.allmusic.com/artist/diana-ross-the-supremes-mn0000821590">Diana Ross &amp; the Supremes</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0002300761">The Ultimate Collection</a>
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0002300761" title="The Ultimate Collection">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/a-very-special-season-mw0000463146" title="A Very Special Season">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://rovimusic.rovicorp.com/image.jpg?c=9JFdQiZJDzw7GePxyGi0Hh_TZlp6n_cq-Emr2zx15tU=&amp;f=1" width="56" height="56" alt="A Very Special Season" style="display: inline;"><noscript><img src="https://rovimusic.rovicorp.com/image.jpg?c=9JFdQiZJDzw7GePxyGi0Hh_TZlp6n_cq-Emr2zx15tU=&f=1" width="56" height="56" alt="A Very Special Season" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1998                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/diana-ross-mn0000594665">Diana Ross</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/a-very-special-season-mw0000463146">A Very Special Season</a>
-                                                    <a href="https://www.allmusic.com/album/a-very-special-season-mw0000463146" title="A Very Special Season">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-smokey-robinson-mw0000100896" title="20th Century Masters - The Millennium Collection: The Best of Smokey Robinson">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/562/MI0001562162.jpg?partner=allrovi.com" width="56" height="56" alt="20th Century Masters - The Millennium Collection: The Best of Smokey Robinson" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/562/MI0001562162.jpg?partner=allrovi.com" width="56" height="56" alt="20th Century Masters - The Millennium Collection: The Best of Smokey Robinson" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2000                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-smokey-robinson-mw0000100896">20th Century Masters - The Millennium Collection: The Best of Smokey Robinson</a>
-                                                    <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-smokey-robinson-mw0000100896" title="20th Century Masters - The Millennium Collection: The Best of Smokey Robinson">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/anthology-1973-mw0002403478" title="Anthology [1973]">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/872/MI0001872617.jpg?partner=allrovi.com" width="56" height="56" alt="Anthology [1973]" style="top: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/872/MI0001872617.jpg?partner=allrovi.com" width="56" height="56" alt="Anthology [1973]" style="top:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1973                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/anthology-1973-mw0002403478">Anthology [1973]</a>
-                                                    <a href="https://www.allmusic.com/album/anthology-1973-mw0002403478" title="Anthology [1973]">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0000645164" title="The Ultimate Collection">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/889/MI0001889841.jpg?partner=allrovi.com" width="56" height="56" alt="The Ultimate Collection" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/889/MI0001889841.jpg?partner=allrovi.com" width="56" height="56" alt="The Ultimate Collection" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1995                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-jackson-5-mn0000083013">The Jackson 5</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0000645164">The Ultimate Collection</a>
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0000645164" title="The Ultimate Collection">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-9"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/chronicles-mw0000352755" title="Chronicles">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/779/MI0002779422.jpg?partner=allrovi.com" width="56" height="104" alt="Chronicles" style="top: -24px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/779/MI0002779422.jpg?partner=allrovi.com" width="56" height="104" alt="Chronicles" style="top:-24px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2005                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/chronicles-mw0000352755">Chronicles</a>
-                                                    <a href="https://www.allmusic.com/album/chronicles-mw0000352755" title="Chronicles">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/songs-in-the-key-of-life-video-mw0000035054" title="Songs in the Key of Life [Video]">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/525/MI0002525767.jpg?partner=allrovi.com" width="56" height="76" alt="Songs in the Key of Life [Video]" style="top: -10px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/525/MI0002525767.jpg?partner=allrovi.com" width="56" height="76" alt="Songs in the Key of Life [Video]" style="top:-10px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1998                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/stevie-wonder-mn0000622805">Stevie Wonder</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/songs-in-the-key-of-life-video-mw0000035054">Songs in the Key of Life [Video]</a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-supremes-a-go-go-mw0000653276" title="The Supremes A&#39; Go-Go">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0003/580/MI0003580362.jpg?partner=allrovi.com" width="56" height="56" alt="The Supremes A&#39; Go-Go" style="top: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0003/580/MI0003580362.jpg?partner=allrovi.com" width="56" height="56" alt="The Supremes A' Go-Go" style="top:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1966                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-supremes-a-go-go-mw0000653276">The Supremes A' Go-Go</a>
-                                                    <a href="https://www.allmusic.com/album/the-supremes-a-go-go-mw0000653276" title="The Supremes A&#39; Go-Go">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/merry-christmas-mw0000320412" title="Merry Christmas">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://rovimusic.rovicorp.com/image.jpg?c=z5MIbG4AUJ-aEMUj8F1dVw4Q1ghY8VaPylnm7PwcKNY=&amp;f=1" width="56" height="56" alt="Merry Christmas" style="top: 0px; display: inline;"><noscript><img src="https://rovimusic.rovicorp.com/image.jpg?c=z5MIbG4AUJ-aEMUj8F1dVw4Q1ghY8VaPylnm7PwcKNY=&f=1" width="56" height="56" alt="Merry Christmas" style="top:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1965                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/merry-christmas-mw0000320412">Merry Christmas</a>
-                                                    <a href="https://www.allmusic.com/album/merry-christmas-mw0000320412" title="Merry Christmas">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/abc-mw0000200071" title="ABC">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/513/MI0002513223.jpg?partner=allrovi.com" width="56" height="56" alt="ABC" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/513/MI0002513223.jpg?partner=allrovi.com" width="56" height="56" alt="ABC" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1970                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-jackson-5-mn0000083013">The Jackson 5</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/abc-mw0000200071">ABC</a>
-                                                    <a href="https://www.allmusic.com/album/abc-mw0000200071" title="ABC">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-marvin-gaye-vol-2-mw0000650179" title="20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/684/MI0000684565.jpg?partner=allrovi.com" width="63" height="56" alt="20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2" style="left: -3px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/684/MI0000684565.jpg?partner=allrovi.com" width="63" height="56" alt="20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2" style="left:-3px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2000                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-marvin-gaye-vol-2-mw0000650179">20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2</a>
-                                                    <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-marvin-gaye-vol-2-mw0000650179" title="20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-definitive-collection-mw0000799044" title="The Definitive Collection">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/820/MI0000820858.jpg?partner=allrovi.com" width="56" height="56" alt="The Definitive Collection" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/820/MI0000820858.jpg?partner=allrovi.com" width="56" height="56" alt="The Definitive Collection" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2008                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-definitive-collection-mw0000799044">The Definitive Collection</a>
-                                                    <a href="https://www.allmusic.com/album/the-definitive-collection-mw0000799044" title="The Definitive Collection">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/anthology-series-the-best-of-gladys-knight-the-pips-mw0000190674" title="Anthology Series: The Best of Gladys Knight &amp; the Pips">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/024/MI0002024453.jpg?partner=allrovi.com" width="64" height="56" alt="Anthology Series: The Best of Gladys Knight &amp; the Pips" style="left: -4px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/024/MI0002024453.jpg?partner=allrovi.com" width="64" height="56" alt="Anthology Series: The Best of Gladys Knight & the Pips" style="left:-4px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1974                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/gladys-knight-the-pips-mn0000667169">Gladys Knight &amp; the Pips</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/anthology-series-the-best-of-gladys-knight-the-pips-mw0000190674">Anthology Series: The Best of Gladys Knight &amp; the Pips</a>
-                                                    <a href="https://www.allmusic.com/album/anthology-series-the-best-of-gladys-knight-the-pips-mw0000190674" title="Anthology Series: The Best of Gladys Knight &amp; the Pips">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/forever-yours-mw0000009444" title="Forever Yours">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/333/MI0000333295.jpg?partner=allrovi.com" width="56" height="65" alt="Forever Yours" style="top: -4px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/333/MI0000333295.jpg?partner=allrovi.com" width="56" height="65" alt="Forever Yours" style="top:-4px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1997                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/forever-yours-mw0000009444">Forever Yours</a>
-                                                    <a href="https://www.allmusic.com/album/forever-yours-mw0000009444" title="Forever Yours">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-live-collection-mw0000551137" title="The Live Collection">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/579/MI0001579031.jpg?partner=allrovi.com" width="62" height="56" alt="The Live Collection" style="left: -3px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/579/MI0001579031.jpg?partner=allrovi.com" width="62" height="56" alt="The Live Collection" style="left:-3px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2004                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-live-collection-mw0000551137">The Live Collection</a>
-                                                    <a href="https://www.allmusic.com/album/the-live-collection-mw0000551137" title="The Live Collection">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/whats-going-on-lets-get-it-on-mw0000190099" title="What&#39;s Going On/Let&#39;s Get It On">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/988/MI0001988088.jpg?partner=allrovi.com" width="56" height="56" alt="What&#39;s Going On/Let&#39;s Get It On" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/988/MI0001988088.jpg?partner=allrovi.com" width="56" height="56" alt="What's Going On/Let's Get It On" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1980                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/whats-going-on-lets-get-it-on-mw0000190099">What's Going On/Let's Get It On</a>
-                                                    <a href="https://www.allmusic.com/album/whats-going-on-lets-get-it-on-mw0000190099" title="What&#39;s Going On/Let&#39;s Get It On">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-9"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-unreleased-album-mw0001895171" title="The Unreleased Album">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/179/MI0002179689.jpg?partner=allrovi.com" width="62" height="56" alt="The Unreleased Album" style="left: -3px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/179/MI0002179689.jpg?partner=allrovi.com" width="62" height="56" alt="The Unreleased Album" style="left:-3px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2004                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/david-ruffin-mn0000811598">David Ruffin</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-unreleased-album-mw0001895171">The Unreleased Album</a>
-                                                    <a href="https://www.allmusic.com/album/the-unreleased-album-mw0001895171" title="The Unreleased Album">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/favorites-mw0000537338" title="Favorites">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/556/MI0001556714.jpg?partner=allrovi.com" width="56" height="56" alt="Favorites" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/556/MI0001556714.jpg?partner=allrovi.com" width="56" height="56" alt="Favorites" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2008                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/favorites-mw0000537338">Favorites</a>
-                                                    <a href="https://www.allmusic.com/album/favorites-mw0000537338" title="Favorites">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/icon-mw0002027861" title="Icon">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/980/MI0002980656.jpg?partner=allrovi.com" width="56" height="56" alt="Icon" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/980/MI0002980656.jpg?partner=allrovi.com" width="56" height="56" alt="Icon" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2010                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/stevie-wonder-mn0000622805">Stevie Wonder</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/icon-mw0002027861">Icon</a>
-                                                    <a href="https://www.allmusic.com/album/icon-mw0002027861" title="Icon">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-temptin-temptations-mw0000203702" title="The Temptin&#39; Temptations">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/045/MI0000045269.jpg?partner=allrovi.com" width="56" height="56" alt="The Temptin&#39; Temptations" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/045/MI0000045269.jpg?partner=allrovi.com" width="56" height="56" alt="The Temptin' Temptations" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1965                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-temptin-temptations-mw0000203702">The Temptin' Temptations</a>
-                                                    <a href="https://www.allmusic.com/album/the-temptin-temptations-mw0000203702" title="The Temptin&#39; Temptations">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/where-did-our-love-go-mw0000204391" title="Where Did Our Love Go">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0003752882.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0003/752/MI0003752882.jpg?partner=allrovi.com" width="56" height="56" alt="Where Did Our Love Go" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0003/752/MI0003752882.jpg?partner=allrovi.com" width="56" height="56" alt="Where Did Our Love Go" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1964                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/where-did-our-love-go-mw0000204391">Where Did Our Love Go</a>
-                                                    <a href="https://www.allmusic.com/album/where-did-our-love-go-mw0000204391" title="Where Did Our Love Go">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/anthology-the-best-of-michael-jackson-mw0000190419" title="Anthology: The Best of Michael Jackson">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0001655165.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/655/MI0001655165.jpg?partner=allrovi.com" width="56" height="57" alt="Anthology: The Best of Michael Jackson" style="top: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/655/MI0001655165.jpg?partner=allrovi.com" width="56" height="57" alt="Anthology: The Best of Michael Jackson" style="top:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1986                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/michael-jackson-mn0000467203">Michael Jackson</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/anthology-the-best-of-michael-jackson-mw0000190419">Anthology: The Best of Michael Jackson</a>
-                                                    <a href="https://www.allmusic.com/album/anthology-the-best-of-michael-jackson-mw0000190419" title="Anthology: The Best of Michael Jackson">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/tracks-of-my-tears-mw0000454358" title="Tracks of My Tears">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0000658780.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/658/MI0000658780.jpg?partner=allrovi.com" width="56" height="56" alt="Tracks of My Tears" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/658/MI0000658780.jpg?partner=allrovi.com" width="56" height="56" alt="Tracks of My Tears" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2000                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/tracks-of-my-tears-mw0000454358">Tracks of My Tears</a>
-                                                    <a href="https://www.allmusic.com/album/tracks-of-my-tears-mw0000454358" title="Tracks of My Tears">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/20th-century-masters-the-christmas-collection-mw0000318036" title="20th Century Masters - The Christmas Collection">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0000391981.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/391/MI0000391981.jpg?partner=allrovi.com" width="56" height="56" alt="20th Century Masters - The Christmas Collection" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/391/MI0000391981.jpg?partner=allrovi.com" width="56" height="56" alt="20th Century Masters - The Christmas Collection" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2003                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/20th-century-masters-the-christmas-collection-mw0000318036">20th Century Masters - The Christmas Collection</a>
-                                                    <a href="https://www.allmusic.com/album/20th-century-masters-the-christmas-collection-mw0000318036" title="20th Century Masters - The Christmas Collection">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/discoveries-mw0000789444" title="Discoveries">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0001627722.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/627/MI0001627722.jpg?partner=allrovi.com" width="56" height="56" alt="Discoveries" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/627/MI0001627722.jpg?partner=allrovi.com" width="56" height="56" alt="Discoveries" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2008                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/discoveries-mw0000789444">Discoveries</a>
-                                                    <a href="https://www.allmusic.com/album/discoveries-mw0000789444" title="Discoveries">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/playboy-please-mr-postman-mw0002547877" title="Playboy/Please Mr. Postman">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0003591767.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0003/591/MI0003591767.jpg?partner=allrovi.com" width="56" height="57" alt="Playboy/Please Mr. Postman" style="top: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0003/591/MI0003591767.jpg?partner=allrovi.com" width="56" height="57" alt="Playboy/Please Mr. Postman" style="top:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2013                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-marvelettes-mn0000376608">The Marvelettes</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/playboy-please-mr-postman-mw0002547877">Playboy/Please Mr. Postman</a>
-                                                    <a href="https://www.allmusic.com/album/playboy-please-mr-postman-mw0002547877" title="Playboy/Please Mr. Postman">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/with-a-lot-o-soul-mw0000200022" title="With a Lot o&#39; Soul">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0000045278.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/045/MI0000045278.jpg?partner=allrovi.com" width="56" height="56" alt="With a Lot o&#39; Soul" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/045/MI0000045278.jpg?partner=allrovi.com" width="56" height="56" alt="With a Lot o' Soul" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1967                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/with-a-lot-o-soul-mw0000200022">With a Lot o' Soul</a>
-                                                    <a href="https://www.allmusic.com/album/with-a-lot-o-soul-mw0000200022" title="With a Lot o&#39; Soul">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/anthology-1974-mw0000837273" title="Anthology [1974]">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0002084199.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/084/MI0002084199.jpg?partner=allrovi.com" width="66" height="56" alt="Anthology [1974]" style="left: -5px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/084/MI0002084199.jpg?partner=allrovi.com" width="66" height="56" alt="Anthology [1974]" style="left:-5px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1974                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/anthology-1974-mw0000837273">Anthology [1974]</a>
-                                                    <a href="https://www.allmusic.com/album/anthology-1974-mw0000837273" title="Anthology [1974]">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/gold-greatest-hits-universal-canada-mw0002300775" title="Gold: Greatest Hits [Universal Canada]">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0001938906.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/938/MI0001938906.jpg?partner=allrovi.com" width="56" height="56" alt="Gold: Greatest Hits [Universal Canada]" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/938/MI0001938906.jpg?partner=allrovi.com" width="56" height="56" alt="Gold: Greatest Hits [Universal Canada]" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2004                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/gold-greatest-hits-universal-canada-mw0002300775">Gold: Greatest Hits [Universal Canada]</a>
-                                                    <a href="https://www.allmusic.com/album/gold-greatest-hits-universal-canada-mw0002300775" title="Gold: Greatest Hits [Universal Canada]">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/super-hits-motown-mw0000256854" title="Super Hits [Motown]">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0001488861.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/488/MI0001488861.jpg?partner=allrovi.com" width="57" height="56" alt="Super Hits [Motown]" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/488/MI0001488861.jpg?partner=allrovi.com" width="57" height="56" alt="Super Hits [Motown]" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1970                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/super-hits-motown-mw0000256854">Super Hits [Motown]</a>
-                                                    <a href="https://www.allmusic.com/album/super-hits-motown-mw0000256854" title="Super Hits [Motown]">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-four-tops-mw0000028696" title="The Ultimate Collection: Four Tops">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0000148094.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/148/MI0000148094.jpg?partner=allrovi.com" width="56" height="56" alt="The Ultimate Collection: Four Tops" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/148/MI0000148094.jpg?partner=allrovi.com" width="56" height="56" alt="The Ultimate Collection: Four Tops" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1997                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-four-tops-mn0000071812">The Four Tops</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-ultimate-collection-four-tops-mw0000028696">The Ultimate Collection: Four Tops</a>
-                                                    <a href="https://www.allmusic.com/album/the-ultimate-collection-four-tops-mw0000028696" title="The Ultimate Collection: Four Tops">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-9"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-early-classics-mw0000741765" title="The Early Classics">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0001959887.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/959/MI0001959887.jpg?partner=allrovi.com" width="56" height="56" alt="The Early Classics" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/959/MI0001959887.jpg?partner=allrovi.com" width="56" height="56" alt="The Early Classics" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1996                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-four-tops-mn0000071812">The Four Tops</a> / <a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-early-classics-mw0000741765">The Early Classics</a>
-                                                    <a href="https://www.allmusic.com/album/the-early-classics-mw0000741765" title="The Early Classics">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/the-supremes-sing-motown-mw0000204288" title="The Supremes Sing Motown">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0002796589.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/796/MI0002796589.jpg?partner=allrovi.com" width="56" height="56" alt="The Supremes Sing Motown" style="left: 0px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/796/MI0002796589.jpg?partner=allrovi.com" width="56" height="56" alt="The Supremes Sing Motown" style="left:-0px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1967                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/the-supremes-sing-motown-mw0000204288">The Supremes Sing Motown</a>
-                                                    <a href="https://www.allmusic.com/album/the-supremes-sing-motown-mw0000204288" title="The Supremes Sing Motown">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <img class="lazy" src="./motown_3_files/album_55x55.png" data-original="//cdn-gce.allmusic.com/images/no_image/album_55x55.png" width="55" height="55" alt="Anthology" style="display: inline;"><noscript><img src="//cdn-gce.allmusic.com/images/no_image/album_55x55.png" width="55" height="55" alt="Anthology" style=""></noscript>                                            </td>
-
-                    <td class="year">
-                        1977                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/stevie-wonder-mn0000622805">Stevie Wonder</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/anthology-mw0000847369">Anthology</a>
-                                                    <a href="https://www.allmusic.com/album/anthology-mw0000847369" title="Anthology">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/dance-party-mw0000200457" title="Dance Party">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0000791709.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/791/MI0000791709.jpg?partner=allrovi.com" width="61" height="56" alt="Dance Party" style="left: -2px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/791/MI0000791709.jpg?partner=allrovi.com" width="61" height="56" alt="Dance Party" style="left:-2px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1965                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/martha-the-vandellas-mn0001199135">Martha &amp; the Vandellas</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/dance-party-mw0000200457">Dance Party</a>
-                                                    <a href="https://www.allmusic.com/album/dance-party-mw0000200457" title="Dance Party">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-8"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/my-world-the-definitive-collection-mw0000656217" title="My World: The Definitive Collection">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0002021283.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0002/021/MI0002021283.jpg?partner=allrovi.com" width="56" height="56" alt="My World: The Definitive Collection" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0002/021/MI0002021283.jpg?partner=allrovi.com" width="56" height="56" alt="My World: The Definitive Collection" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2005                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/my-world-the-definitive-collection-mw0000656217">My World: The Definitive Collection</a>
-                                                    <a href="https://www.allmusic.com/album/my-world-the-definitive-collection-mw0000656217" title="My World: The Definitive Collection">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/together-take-two-mw0000454007" title="Together/Take Two">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0001903638.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/903/MI0001903638.jpg?partner=allrovi.com" width="63" height="56" alt="Together/Take Two" style="left: -3px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/903/MI0001903638.jpg?partner=allrovi.com" width="63" height="56" alt="Together/Take Two" style="left:-3px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2001                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/together-take-two-mw0000454007">Together/Take Two</a>
-                                                    <a href="https://www.allmusic.com/album/together-take-two-mw0000454007" title="Together/Take Two">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/mpg-thats-the-way-love-is-mw0000454766" title="M.P.G./That&#39;s the Way Love Is">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0001744638.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0001/744/MI0001744638.jpg?partner=allrovi.com" width="63" height="56" alt="M.P.G./That&#39;s the Way Love Is" style="left: -3px; display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0001/744/MI0001744638.jpg?partner=allrovi.com" width="63" height="56" alt="M.P.G./That's the Way Love Is" style="left:-3px;"></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        2001                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/mpg-thats-the-way-love-is-mw0000454766">M.P.G./That's the Way Love Is</a>
-                                                    <a href="https://www.allmusic.com/album/mpg-thats-the-way-love-is-mw0000454766" title="M.P.G./That&#39;s the Way Love Is">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-7"></div>
-                    </td>
-                </tr>
-
-                            <tr>
-                    <td class="cover">
-                                                    <a href="https://www.allmusic.com/album/anthology-mw0000192045" title="Anthology">
-                                <div class="cropped-image crop-image-borders" style="width:55px;height:55px;"><img class="lazy" src="./motown_3_files/MI0000045140.jpg" data-original="https://cps-static.rovicorp.com/3/JPG_75/MI0000/045/MI0000045140.jpg?partner=allrovi.com" width="56" height="56" alt="Anthology" style="display: inline;"><noscript><img src="https://cps-static.rovicorp.com/3/JPG_75/MI0000/045/MI0000045140.jpg?partner=allrovi.com" width="56" height="56" alt="Anthology" style=""></noscript></div>                            </a>
-                                            </td>
-
-                    <td class="year">
-                        1995                    </td>
-
-                    <td class="artist">
-                        <a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a>                    </td>
-
-                    <td class="title">
-                        <a href="https://www.allmusic.com/album/anthology-mw0000192045">Anthology</a>
-                                                    <a href="https://www.allmusic.com/album/anthology-mw0000192045" title="Anthology">
-                                <span class="song-review"></span>
-                            </a>
-                                            </td>
-
-                    <td class="rating">
-                        <div class="allmusic-rating rating-allmusic-9"></div>
-                    </td>
-                </tr>
-
-                        </tbody>
-        </table>
-    </div>
-    <div class="mobile-results">
-
-        <div class="discography-container">
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-ultimate-collection-1997-mw0000644365"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/074/MI0000074155.jpg?partner=allrovi.com" alt="The Ultimate Collection [1997]" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1997                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Ultimate Collection [1997]">
-                <a href="https://www.allmusic.com/album/the-ultimate-collection-1997-mw0000644365" class="title_adv_search_results">The Ultimate Collection [1997]</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-The Ultimate Collection [1997]">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0002300761"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0004/091/MI0004091368.jpg?partner=allrovi.com" alt="The Ultimate Collection" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1997                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/diana-ross-mn0000594665">Diana Ross</a> / <a href="https://www.allmusic.com/artist/diana-ross-the-supremes-mn0000821590">Diana Ross &amp; the Supremes</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Ultimate Collection">
-                <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0002300761" class="title_adv_search_results">The Ultimate Collection</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-The Ultimate Collection">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/a-very-special-season-mw0000463146"><img src="./motown_3_files/lazy.gif" data-original="https://rovimusic.rovicorp.com/image.jpg?c=9JFdQiZJDzw7GePxyGi0Hh_TZlp6n_cq-Emr2zx15tU=&amp;f=4" alt="A Very Special Season" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1998                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/diana-ross-mn0000594665">Diana Ross</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="A Very Special Season">
-                <a href="https://www.allmusic.com/album/a-very-special-season-mw0000463146" class="title_adv_search_results">A Very Special Season</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-A Very Special Season">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-smokey-robinson-mw0000100896"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/562/MI0001562162.jpg?partner=allrovi.com" alt="20th Century Masters - The Millennium Collection: The Best of Smokey Robinson" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2000                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="20th Century Masters - The Millennium Collection: The Best of Smokey Robinson">
-                <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-smokey-robinson-mw0000100896" class="title_adv_search_results">20th Century Masters - The Millennium Collection: The Best of Smokey Robinson</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-20th Century Masters - The Millennium Collection: The Best of Smokey Robinson">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/anthology-1973-mw0002403478"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/872/MI0001872617.jpg?partner=allrovi.com" alt="Anthology [1973]" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1973                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Anthology [1973]">
-                <a href="https://www.allmusic.com/album/anthology-1973-mw0002403478" class="title_adv_search_results">Anthology [1973]</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Anthology [1973]">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0000645164"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/889/MI0001889841.jpg?partner=allrovi.com" alt="The Ultimate Collection" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1995                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-jackson-5-mn0000083013">The Jackson 5</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Ultimate Collection">
-                <a href="https://www.allmusic.com/album/the-ultimate-collection-mw0000645164" class="title_adv_search_results">The Ultimate Collection</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="9-The Ultimate Collection">
-                <div class="allmusic-rating rating-allmusic-9"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/chronicles-mw0000352755"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_500/MI0002/779/MI0002779422.jpg?partner=allrovi.com" alt="Chronicles" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2005                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Chronicles">
-                <a href="https://www.allmusic.com/album/chronicles-mw0000352755" class="title_adv_search_results">Chronicles</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Chronicles">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/songs-in-the-key-of-life-video-mw0000035054"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_500/MI0002/525/MI0002525767.jpg?partner=allrovi.com" alt="Songs in the Key of Life [Video]" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1998                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/stevie-wonder-mn0000622805">Stevie Wonder</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Songs in the Key of Life [Video]">
-                <a href="https://www.allmusic.com/album/songs-in-the-key-of-life-video-mw0000035054" class="title_adv_search_results">Songs in the Key of Life [Video]</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Songs in the Key of Life [Video]">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-supremes-a-go-go-mw0000653276"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0003/580/MI0003580362.jpg?partner=allrovi.com" alt="The Supremes A&#39; Go-Go" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1966                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Supremes A&#39; Go-Go">
-                <a href="https://www.allmusic.com/album/the-supremes-a-go-go-mw0000653276" class="title_adv_search_results">The Supremes A' Go-Go</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-The Supremes A&#39; Go-Go">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/merry-christmas-mw0000320412"><img src="./motown_3_files/lazy.gif" data-original="https://rovimusic.rovicorp.com/image.jpg?c=z5MIbG4AUJ-aEMUj8F1dVw4Q1ghY8VaPylnm7PwcKNY=&amp;f=4" alt="Merry Christmas" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1965                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Merry Christmas">
-                <a href="https://www.allmusic.com/album/merry-christmas-mw0000320412" class="title_adv_search_results">Merry Christmas</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Merry Christmas">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/abc-mw0000200071"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0002/513/MI0002513223.jpg?partner=allrovi.com" alt="ABC" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1970                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-jackson-5-mn0000083013">The Jackson 5</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="ABC">
-                <a href="https://www.allmusic.com/album/abc-mw0000200071" class="title_adv_search_results">ABC</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-ABC">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-marvin-gaye-vol-2-mw0000650179"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/684/MI0000684565.jpg?partner=allrovi.com" alt="20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2000                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2">
-                <a href="https://www.allmusic.com/album/20th-century-masters-the-millennium-collection-the-best-of-marvin-gaye-vol-2-mw0000650179" class="title_adv_search_results">20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-20th Century Masters - The Millennium Collection: The Best of Marvin Gaye, Vol. 2">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-definitive-collection-mw0000799044"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/820/MI0000820858.jpg?partner=allrovi.com" alt="The Definitive Collection" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2008                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Definitive Collection">
-                <a href="https://www.allmusic.com/album/the-definitive-collection-mw0000799044" class="title_adv_search_results">The Definitive Collection</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-The Definitive Collection">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/anthology-series-the-best-of-gladys-knight-amp-the-pips-mw0000190674"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0002/024/MI0002024453.jpg?partner=allrovi.com" alt="Anthology Series: The Best of Gladys Knight &amp; the Pips" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1974                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/gladys-knight-the-pips-mn0000667169">Gladys Knight &amp; the Pips</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Anthology Series: The Best of Gladys Knight &amp; the Pips">
-                <a href="https://www.allmusic.com/album/anthology-series-the-best-of-gladys-knight-the-pips-mw0000190674" class="title_adv_search_results">Anthology Series: The Best of Gladys Knight &amp; the Pips</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Anthology Series: The Best of Gladys Knight &amp; the Pips">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/forever-yours-mw0000009444"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_500/MI0000/333/MI0000333295.jpg?partner=allrovi.com" alt="Forever Yours" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1997                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Forever Yours">
-                <a href="https://www.allmusic.com/album/forever-yours-mw0000009444" class="title_adv_search_results">Forever Yours</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Forever Yours">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-live-collection-mw0000551137"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/579/MI0001579031.jpg?partner=allrovi.com" alt="The Live Collection" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2004                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Live Collection">
-                <a href="https://www.allmusic.com/album/the-live-collection-mw0000551137" class="title_adv_search_results">The Live Collection</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-The Live Collection">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/whats-going-on-lets-get-it-on-mw0000190099"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/988/MI0001988088.jpg?partner=allrovi.com" alt="What&#39;s Going On/Let&#39;s Get It On" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1980                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="What&#39;s Going On/Let&#39;s Get It On">
-                <a href="https://www.allmusic.com/album/whats-going-on-lets-get-it-on-mw0000190099" class="title_adv_search_results">What's Going On/Let's Get It On</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="9-What&#39;s Going On/Let&#39;s Get It On">
-                <div class="allmusic-rating rating-allmusic-9"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-unreleased-album-mw0001895171"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0002/179/MI0002179689.jpg?partner=allrovi.com" alt="The Unreleased Album" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2004                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/david-ruffin-mn0000811598">David Ruffin</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Unreleased Album">
-                <a href="https://www.allmusic.com/album/the-unreleased-album-mw0001895171" class="title_adv_search_results">The Unreleased Album</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-The Unreleased Album">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/favorites-mw0000537338"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/556/MI0001556714.jpg?partner=allrovi.com" alt="Favorites" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2008                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Favorites">
-                <a href="https://www.allmusic.com/album/favorites-mw0000537338" class="title_adv_search_results">Favorites</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Favorites">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/icon-mw0002027861"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0002/980/MI0002980656.jpg?partner=allrovi.com" alt="Icon" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2010                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/stevie-wonder-mn0000622805">Stevie Wonder</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Icon">
-                <a href="https://www.allmusic.com/album/icon-mw0002027861" class="title_adv_search_results">Icon</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Icon">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-temptin-temptations-mw0000203702"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/045/MI0000045269.jpg?partner=allrovi.com" alt="The Temptin&#39; Temptations" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1965                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Temptin&#39; Temptations">
-                <a href="https://www.allmusic.com/album/the-temptin-temptations-mw0000203702" class="title_adv_search_results">The Temptin' Temptations</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-The Temptin&#39; Temptations">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/where-did-our-love-go-mw0000204391"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0003/752/MI0003752882.jpg?partner=allrovi.com" alt="Where Did Our Love Go" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1964                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Where Did Our Love Go">
-                <a href="https://www.allmusic.com/album/where-did-our-love-go-mw0000204391" class="title_adv_search_results">Where Did Our Love Go</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Where Did Our Love Go">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/anthology-the-best-of-michael-jackson-mw0000190419"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/655/MI0001655165.jpg?partner=allrovi.com" alt="Anthology: The Best of Michael Jackson" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1986                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/michael-jackson-mn0000467203">Michael Jackson</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Anthology: The Best of Michael Jackson">
-                <a href="https://www.allmusic.com/album/anthology-the-best-of-michael-jackson-mw0000190419" class="title_adv_search_results">Anthology: The Best of Michael Jackson</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Anthology: The Best of Michael Jackson">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/tracks-of-my-tears-mw0000454358"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/658/MI0000658780.jpg?partner=allrovi.com" alt="Tracks of My Tears" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2000                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Tracks of My Tears">
-                <a href="https://www.allmusic.com/album/tracks-of-my-tears-mw0000454358" class="title_adv_search_results">Tracks of My Tears</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Tracks of My Tears">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/20th-century-masters-the-christmas-collection-mw0000318036"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/391/MI0000391981.jpg?partner=allrovi.com" alt="20th Century Masters - The Christmas Collection" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2003                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a> / <a href="https://www.allmusic.com/artist/smokey-robinson-the-miracles-mn0000035021">Smokey Robinson &amp; the Miracles</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="20th Century Masters - The Christmas Collection">
-                <a href="https://www.allmusic.com/album/20th-century-masters-the-christmas-collection-mw0000318036" class="title_adv_search_results">20th Century Masters - The Christmas Collection</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-20th Century Masters - The Christmas Collection">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/discoveries-mw0000789444"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/627/MI0001627722.jpg?partner=allrovi.com" alt="Discoveries" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2008                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Discoveries">
-                <a href="https://www.allmusic.com/album/discoveries-mw0000789444" class="title_adv_search_results">Discoveries</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Discoveries">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/playboy-please-mr-postman-mw0002547877"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0003/591/MI0003591767.jpg?partner=allrovi.com" alt="Playboy/Please Mr. Postman" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2013                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-marvelettes-mn0000376608">The Marvelettes</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Playboy/Please Mr. Postman">
-                <a href="https://www.allmusic.com/album/playboy-please-mr-postman-mw0002547877" class="title_adv_search_results">Playboy/Please Mr. Postman</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Playboy/Please Mr. Postman">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/with-a-lot-o-soul-mw0000200022"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/045/MI0000045278.jpg?partner=allrovi.com" alt="With a Lot o&#39; Soul" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1967                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="With a Lot o&#39; Soul">
-                <a href="https://www.allmusic.com/album/with-a-lot-o-soul-mw0000200022" class="title_adv_search_results">With a Lot o' Soul</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-With a Lot o&#39; Soul">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/anthology-1974-mw0000837273"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0002/084/MI0002084199.jpg?partner=allrovi.com" alt="Anthology [1974]" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1974                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Anthology [1974]">
-                <a href="https://www.allmusic.com/album/anthology-1974-mw0000837273" class="title_adv_search_results">Anthology [1974]</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Anthology [1974]">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/gold-greatest-hits-universal-canada-mw0002300775"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/938/MI0001938906.jpg?partner=allrovi.com" alt="Gold: Greatest Hits [Universal Canada]" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2004                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Gold: Greatest Hits [Universal Canada]">
-                <a href="https://www.allmusic.com/album/gold-greatest-hits-universal-canada-mw0002300775" class="title_adv_search_results">Gold: Greatest Hits [Universal Canada]</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Gold: Greatest Hits [Universal Canada]">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/super-hits-motown-mw0000256854"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/488/MI0001488861.jpg?partner=allrovi.com" alt="Super Hits [Motown]" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1970                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Super Hits [Motown]">
-                <a href="https://www.allmusic.com/album/super-hits-motown-mw0000256854" class="title_adv_search_results">Super Hits [Motown]</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Super Hits [Motown]">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-ultimate-collection-four-tops-mw0000028696"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/148/MI0000148094.jpg?partner=allrovi.com" alt="The Ultimate Collection: Four Tops" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1997                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-four-tops-mn0000071812">The Four Tops</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Ultimate Collection: Four Tops">
-                <a href="https://www.allmusic.com/album/the-ultimate-collection-four-tops-mw0000028696" class="title_adv_search_results">The Ultimate Collection: Four Tops</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="9-The Ultimate Collection: Four Tops">
-                <div class="allmusic-rating rating-allmusic-9"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-early-classics-mw0000741765"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/959/MI0001959887.jpg?partner=allrovi.com" alt="The Early Classics" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1996                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-four-tops-mn0000071812">The Four Tops</a> / <a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Early Classics">
-                <a href="https://www.allmusic.com/album/the-early-classics-mw0000741765" class="title_adv_search_results">The Early Classics</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-The Early Classics">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/the-supremes-sing-motown-mw0000204288"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0002/796/MI0002796589.jpg?partner=allrovi.com" alt="The Supremes Sing Motown" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1967                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-supremes-mn0000477875">The Supremes</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="The Supremes Sing Motown">
-                <a href="https://www.allmusic.com/album/the-supremes-sing-motown-mw0000204288" class="title_adv_search_results">The Supremes Sing Motown</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-The Supremes Sing Motown">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/anthology-mw0000847369"><img src="./motown_3_files/album_300x300.png" alt="Anthology" class="img-responsive"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1977                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/stevie-wonder-mn0000622805">Stevie Wonder</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Anthology">
-                <a href="https://www.allmusic.com/album/anthology-mw0000847369" class="title_adv_search_results">Anthology</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Anthology">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/dance-party-mw0000200457"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/791/MI0000791709.jpg?partner=allrovi.com" alt="Dance Party" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1965                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/martha-the-vandellas-mn0001199135">Martha &amp; the Vandellas</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Dance Party">
-                <a href="https://www.allmusic.com/album/dance-party-mw0000200457" class="title_adv_search_results">Dance Party</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="8-Dance Party">
-                <div class="allmusic-rating rating-allmusic-8"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/my-world-the-definitive-collection-mw0000656217"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0002/021/MI0002021283.jpg?partner=allrovi.com" alt="My World: The Definitive Collection" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2005                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/smokey-robinson-mn0000821571">Smokey Robinson</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="My World: The Definitive Collection">
-                <a href="https://www.allmusic.com/album/my-world-the-definitive-collection-mw0000656217" class="title_adv_search_results">My World: The Definitive Collection</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-My World: The Definitive Collection">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/together-take-two-mw0000454007"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/903/MI0001903638.jpg?partner=allrovi.com" alt="Together/Take Two" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2001                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Together/Take Two">
-                <a href="https://www.allmusic.com/album/together-take-two-mw0000454007" class="title_adv_search_results">Together/Take Two</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-Together/Take Two">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/mpg-thats-the-way-love-is-mw0000454766"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0001/744/MI0001744638.jpg?partner=allrovi.com" alt="M.P.G./That&#39;s the Way Love Is" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    2001                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/marvin-gaye-mn0000316834">Marvin Gaye</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="M.P.G./That&#39;s the Way Love Is">
-                <a href="https://www.allmusic.com/album/mpg-thats-the-way-love-is-mw0000454766" class="title_adv_search_results">M.P.G./That's the Way Love Is</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="7-M.P.G./That&#39;s the Way Love Is">
-                <div class="allmusic-rating rating-allmusic-7"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                            
-    <div class="discography-item-container">
-                <div class="cover">
-                            <a href="https://www.allmusic.com/album/anthology-mw0000192045"><img src="./motown_3_files/lazy.gif" data-original="https://cps-static.rovicorp.com/3/JPG_400/MI0000/045/MI0000045140.jpg?partner=allrovi.com" alt="Anthology" class="lazy" style="display: inline;"></a>
-                    </div>
-        <div class="meta">
-                                        <div class="year">
-                    1995                </div>
-            
-                                        <div class="result-artist"><a href="https://www.allmusic.com/artist/the-temptations-mn0000569685">The Temptations</a></div> <!-- todo: change me to whatever used on homepage? -->
-            
-                                    <div class="title" data-sort-value="Anthology">
-                <a href="https://www.allmusic.com/album/anthology-mw0000192045" class="title_adv_search_results">Anthology</a>            </div>
-            
-                        
-                                    <div class="all-rating" data-sort-value="9-Anthology">
-                <div class="allmusic-rating rating-allmusic-9"></div>
-            </div>
-            
-        </div>
-
-    </div>
-
-                    </div>
-
-    </div>
-    <div class="pagination">
-        <div class="pagination"><span class="prev"><a href="https://www.allmusic.com/advanced-search/results/2" data-ci-pagination-page="2" rel="prev">« Previous</a></span><a href="https://www.allmusic.com/advanced-search/results/" data-ci-pagination-page="1" rel="start">1</a><a href="https://www.allmusic.com/advanced-search/results/2" data-ci-pagination-page="2">2</a><span class="current">3</span><a href="https://www.allmusic.com/advanced-search/results/4" data-ci-pagination-page="4">4</a><a href="https://www.allmusic.com/advanced-search/results/5" data-ci-pagination-page="5">5</a><a href="https://www.allmusic.com/advanced-search/results/6" data-ci-pagination-page="6">6</a><a href="https://www.allmusic.com/advanced-search/results/7" data-ci-pagination-page="7">7</a><a href="https://www.allmusic.com/advanced-search/results/8" data-ci-pagination-page="8">8</a><span class="next"><a href="https://www.allmusic.com/advanced-search/results/4" data-ci-pagination-page="4" rel="next">Next »</a></span></div>    </div>
-</section>
+        <section class="results"><span class="loading"></span></section>
     </div>
 
 </div>
 
 <div class="stripe-container footer-leaderboard">
             <div class="advertising leaderboard">
-                                <div class="complex_leaderboard" id="complex_leaderboard_footer" data-cmnunt-ad-size="728x91" data-google-query-id="CLDnuYSwp98CFROR3godvmMGdw" style="">    <div id="google_ads_iframe_/5202/allmusic/discover_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5202/allmusic/discover_2" title="3rd party ad content" name="google_ads_iframe_/5202/allmusic/discover_2" width="728" height="91" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="5" data-load-complete="true" src="./motown_3_files/saved_resource(6).html"></iframe></div></div>                    </div>
+                                <div class="complex_leaderboard" id="complex_leaderboard_footer" data-cmnunt-ad-size="728x91" data-google-query-id="CPTCrIWfrN8CFQuiewodTMEHyQ" style="">    <div id="google_ads_iframe_/5202/allmusic/discover_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5202/allmusic/discover_0" title="3rd party ad content" name="google_ads_iframe_/5202/allmusic/discover_0" width="728" height="91" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="5" data-load-complete="true" src="./motown_3_files/saved_resource(1).html"></iframe></div></div>                    </div>
     </div>
 <div class="stripe-container footer-container">
     <div class="inner-footer-container">
@@ -15627,7 +13785,7 @@ a#fdbk_close {
     </div>
 </div>
 <div class="advertisement-div-footer">
-            <div id="Allmusic_ROS_1x1_Footer" data-google-query-id="CMXnxuivp98CFc474AodriMJdg">    <script type="text/javascript">        googletag.cmd.push(function(){ googletag.display('Allmusic_ROS_1x1_Footer'); });    </script><div id="google_ads_iframe_/22732481/Allmusic_ROS_1x1_Footer_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22732481/Allmusic_ROS_1x1_Footer_0" title="3rd party ad content" name="google_ads_iframe_/22732481/Allmusic_ROS_1x1_Footer_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./motown_3_files/saved_resource(7).html"></iframe></div></div>    </div><script src="./motown_3_files/jquery.min.js"></script>
+            <div id="Allmusic_ROS_1x1_Footer" data-google-query-id="CJn84IOfrN8CFRMU4AodB-IABg">    <script type="text/javascript">        googletag.cmd.push(function(){ googletag.display('Allmusic_ROS_1x1_Footer'); });    </script><div id="google_ads_iframe_/22732481/Allmusic_ROS_1x1_Footer_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22732481/Allmusic_ROS_1x1_Footer_0" title="3rd party ad content" name="google_ads_iframe_/22732481/Allmusic_ROS_1x1_Footer_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./motown_3_files/saved_resource(2).html"></iframe></div></div>    </div><script src="./motown_3_files/jquery.min.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="//cdn-gce.allmusic.com/js/jquery/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
 <script src="./motown_3_files/jquery-ui.min.js"></script>
 <script>!window.jQuery.ui && document.write(unescape('%3Cscript src="//cdn-gce.allmusic.com/js/jquery/jquery-ui.min.js"%3E%3C/script%3E'))</script>
@@ -15660,7 +13818,7 @@ a#fdbk_close {
         limit: '3',
         product: 'allmedianetwork_allmusic'
     });
-</script><a href="https://www.allmusic.com/advanced-search#" id="fdbk_tab" class="fdbk_tab_hidden" style="background-color:#222">FEEDBACK</a><div id="fdbk_overlay" style="display:none"><div id="fdbk_container"><a href="https://www.allmusic.com/advanced-search#" id="fdbk_close"></a><iframe id="fdbk_iframe" allowtransparency="true" scrolling="no" frameborder="0" class="loading" width="658px" height="100%" style="width: 658px; height: 100%;" src="./motown_3_files/saved_resource(8).html"></iframe></div><div id="fdbk_screen"></div></div>
+</script><a href="https://www.allmusic.com/advanced-search#" id="fdbk_tab" class="fdbk_tab_hidden" style="background-color:#222">FEEDBACK</a><div id="fdbk_overlay" style="display:none"><div id="fdbk_container"><a href="https://www.allmusic.com/advanced-search#" id="fdbk_close"></a><iframe id="fdbk_iframe" allowtransparency="true" scrolling="no" frameborder="0" class="loading" width="658px" height="100%" style="width: 658px; height: 100%;" src="./motown_3_files/saved_resource(3).html"></iframe></div><div id="fdbk_screen"></div></div>
 <!-- END GetSat -->
 
 <!-- Begin comScore Tag -->
@@ -15679,7 +13837,7 @@ a#fdbk_close {
 <!-- End comScore Tag -->
 
 </div>
-</div><iframe name="__cmpLocator" style="display: none;" src="./motown_3_files/saved_resource(9).html"></iframe>
+</div><iframe name="__cmpLocator" style="display: none;" src="./motown_3_files/saved_resource(4).html"></iframe>
 <!-- Footer Ad Tag -->
 <script type="text/javascript">
 (function() {
@@ -15767,9 +13925,9 @@ firstAdsLoaded = initialLoadAds(isMobile);
 }
 })();
 </script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"37e6a77380","applicationID":"39608998","transactionName":"NlMEYhZXW0oEWkQNVg8ZJ1UQX1pXSnhUElgPVQNSO0VQWBdaWEtQD1IDTg==","queueTime":0,"applicationTime":13,"atts":"GhQHFF5NSEQ=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"37e6a77380","applicationID":"39608998","transactionName":"NlMEYhZXW0oEWkQNVg8ZJ1UQX1pXSnhUElgPVQNSO0VQWBdaWEtQD1IDTg==","queueTime":0,"applicationTime":14,"atts":"GhQHFF5NSEQ=","errorBeacon":"bam.nr-data.net","agent":""}</script>
 
-<div id="ctoolbar" class="tb-desktop">        <div class="ctoolbar-desktop tb-dark tb-solid">
+<iframe id="google_osd_static_frame_2955915474863" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./motown_3_files/saved_resource(5).html"></iframe><div id="ctoolbar" class="tb-desktop">        <div class="ctoolbar-desktop tb-dark tb-solid">
             <div class="tb-box tb-logo">    
                 <a id="tb-logo-link" href="https://about.complex.com/" target="_self"><span class="tb-logo-icon"></span></a>
             </div>
@@ -15809,8 +13967,8 @@ firstAdsLoaded = initialLoadAds(isMobile);
 </a></div></div>
 
             <div class="tb-box tb-ad">
-                <div id="cmn_ad_toolbar" class="adUnits footer-ad" data-cmnunt-ad-size="7x7" data-google-query-id="CO-Alemvp98CFQo-4AodOCsJ7Q" style=""><div id="google_ads_iframe_/5202/allmusic/discover_1__container__" style="border: 0pt none; display: inline-block; width: 320px; height: 51px;"><iframe frameborder="0" src="./motown_3_files/container.html" id="google_ads_iframe_/5202/allmusic/discover_1" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="320px" height="50px" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+                <div id="cmn_ad_toolbar" class="adUnits footer-ad" data-cmnunt-ad-size="7x7" data-google-query-id="CIiOl4SfrN8CFcg54Aod_QABTg" style="display: none;"><div id="google_ads_iframe_/5202/allmusic/discover_3__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5202/allmusic/discover_3" title="3rd party ad content" name="google_ads_iframe_/5202/allmusic/discover_3" width="320" height="51" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" src="./motown_3_files/saved_resource(6).html"></iframe></div></div>
             </div>
         </div>
         <div class="tb-toggle"><span class="tb-toggle-text">Close</span> <i class="tb-chevron-circle-right"></i></div>
-</div><iframe id="google_osd_static_frame_4427909833596" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./motown_3_files/saved_resource(10).html"></iframe><script type="text/javascript" src="./motown_3_files/n.js"></script><script src="./motown_3_files/abd.js"></script></body></html>
+</div><script type="text/javascript" src="./motown_3_files/n.js"></script><script src="./motown_3_files/abd.js"></script></body></html>
