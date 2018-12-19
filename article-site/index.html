@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="lib/jquery.min.js" type="text/javascript"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	
+	<link rel="icon" href="favicon.ico" />
+	<link rel="stylesheet" href="index-style.css" type="text/css" media="screen"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	
+	<title>Evolution of R&B</title>
+	<meta name="author" content="Thibaud Perret, Lucas Massemin, Raphaël 'Mad' Madillo">
+	<!---<link rel="stylesheet" href="style.css">--->
+</head>
+<body>
+	<script src="visualisation.js"></script>
+	<div class="article">
+		<h1 id="title">Evolution of R&B</h1>
+		<h2 id="jump-blues">Jump blues, premise of Rhythm and Blues</h2>
+		<p id="jump-blues">jbfk dmfn sdkjkjsndfkjnsdfkj sdfmn sdfmn asmnasmasmnasnmasmn asmnads as n dssn dnnmasmnasnm asmndmn asdmnmnas mnsdkj skjsk sdmsmdnvksdf ksdf sdksdks dvksd vk sdv</p>
+		<div>
+			<a href="https://plot.ly/~luke_martin/114/?share_key=x8oZYy0zOJvixK6B6hOBeq" target="_blank" title="Mean of valence value in songs for main RnB genres" style="display: block; text-align: center;"><img src="https://plot.ly/~luke_martin/114.png?share_key=x8oZYy0zOJvixK6B6hOBeq" alt="Mean of valence value in songs for main RnB genres" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+			<script data-plotly="luke_martin:114" sharekey-plotly="x8oZYy0zOJvixK6B6hOBeq" src="https://plot.ly/embed.js" async></script>
+		</div>
+		<p><a href="about-us.html">About us</a></p>
+	</div>	
+	<div class="container">
+		<div class="left">	
+			<svg id="vis" viewBox="-70 -20 340 240" width="100%" height="85%" style="background:#fff"></svg>
+			<svg id="timeline" viewBox="-10 -40 820 160" width="100%" height="15%" style="background:#fff">
+			<pattern id="image1" x="0" y="0" height="40" width="40">
+			<image x="0" y="0" width="20" height="20" xlink:href="./keypoint_vinyl_selected.png"></image>
+			</pattern>
+			<pattern id="image2" x="0" y="0" height="40" width="40">
+			<image x="0" y="0" width="20" height="20" xlink:href="./keypoint_vinyl_unselected.png"></image>
+			</pattern>
+			</svg>
+		</div>
+		<div class="right" id ="info">
+		</div>
+	</div>
+</body>
+</html>
