@@ -1,5 +1,5 @@
 body {
-	margin: 0;	
+	margin: 0;
 	font-family: 'PT Serif', serif;
 }
 
@@ -96,7 +96,7 @@ p.no-info {
 }
 
 .card a {
-	text-align: right;	
+	text-align: right;
 }
 
 a.link {
@@ -136,7 +136,7 @@ text.year {
 text.legend {
 	/* fill: #222; */
 	font-size: 6;
-	alignment-baseline: middle; 
+	alignment-baseline: middle;
 }
 
 circle.normal {
@@ -161,7 +161,7 @@ rect.info-card {
 	width: 80;
 	height: 50;
 	stroke: #ddd;
-	stroke-width: 0.2;	
+	stroke-width: 0.2;
 }
 
 text.info-card {
@@ -191,7 +191,7 @@ text.song-name {
 	fill: #938DE3;
 }
 
-:not(.stroke).alternative-rnb {	
+:not(.stroke).alternative-rnb {
 	fill: #E5625D;
 }
 
@@ -231,7 +231,7 @@ path.stroke {
 	stroke: #938DE3;
 }
 
-.stroke.alternative-rnb {	
+.stroke.alternative-rnb {
 	stroke: #E5625D;
 }
 
