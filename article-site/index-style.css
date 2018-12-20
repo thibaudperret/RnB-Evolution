@@ -26,6 +26,12 @@ div.article {
 
 /* FOR VISUALIZATION */
 
+div.small-vis {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 div.container {
 	width: 80%;
 	height: 80%;
@@ -177,32 +183,103 @@ text.song-name {
 	font-size: 5;
 }
 
-.contemporary-rnb {
+:not(.stroke).contemporary-rnb {
 	fill: #4FF27E;
 }
 
-.british-rnb {
+:not(.stroke).british-rnb {
 	fill: #938DE3;
 }
 
-.alternative-rnb {	
+:not(.stroke).alternative-rnb {	
 	fill: #E5625D;
 }
 
-.new-jack-swing-rnb {
-	fill: #EDC151;
+:not(.stroke).new-jack-swing-rnb {
+	fill: #9c8855;
 }
 
-.new-orleans-rnb {
-	fill: #053A34;
+:not(.stroke).new-orleans-rnb {
+	fill: #ff67fd;
 }
 
-.jump-blues {
+:not(.stroke).jump-blues {
 	fill: #5CC7D7;
 }
 
-.blue-eyed-soul {
+:not(.stroke).blue-eyed-soul {
 	fill: #2E61D7;
+}
+
+:not(.stroke).early-rnb {
+	fill: #ff9e4e;
+}
+
+:not(.stroke).motown-rnb {
+	fill: #fff200;
+}
+
+path.stroke {
+	stroke-width: 2;
+}
+
+.stroke.contemporary-rnb {
+	stroke: #4FF27E;
+}
+
+.stroke.british-rnb {
+	stroke: #938DE3;
+}
+
+.stroke.alternative-rnb {	
+	stroke: #E5625D;
+}
+
+.stroke.new-jack-swing-rnb {
+	stroke: #9c8855;
+}
+
+.stroke.new-orleans-rnb {
+	stroke: #ff67fd;
+}
+
+.stroke.jump-blues {
+	stroke: #5CC7D7;
+}
+
+.stroke.blue-eyed-soul {
+	stroke: #2E61D7;
+}
+
+.stroke.early-rnb {
+	stroke: #ff9e4e;
+}
+
+.stroke.motown-rnb {
+	stroke: #fff200;
+}
+
+.feature-label {
+	pointer-events: none;
+}
+
+polygon {
+	pointer-events: none;
+}
+
+text.feature-label {
+	fill: #ddd;
+	font-size: 7;
+}
+
+text.album-info {
+	fill: #ddd;
+	font-size: 8;
+	text-anchor: middle;
+}
+
+.album-info {
+	pointer-events: none;
 }
 
 rect#track {
