@@ -8,26 +8,110 @@ function whenDocumentLoaded(action) {
 }
 
 whenDocumentLoaded(() => {
-	new SmallVis1("vis1").redraw();
-	Promise.all([d3.json("classic_album_cont.json"), d3.json("classic_album_no.json")])
-		   .then(function(files) {
-			   new SmallVis2("vis2", files[0], files[1]).redraw();
+	Promise.all([d3.json("song_mini_viz/jb1.json"), d3.json("song_mini_viz/jb2.json") , d3.json("song_mini_viz/jb3.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis1", files).redraw();
 		   });
-	// new SmallVis2("vis2").redraw();
+	
+	Promise.all([d3.json("song_mini_viz/e1.json"), d3.json("song_mini_viz/e2.json"), d3.json("song_mini_viz/e3.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis2", files).redraw();
+		   });
+	
+	Promise.all([d3.json("song_mini_viz/e4.json"), d3.json("song_mini_viz/e5.json"), d3.json("song_mini_viz/e6.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis2-2", files).redraw();
+		   });
+	
+	Promise.all([d3.json("song_mini_viz/mo1.json"), d3.json("song_mini_viz/mo2.json"), d3.json("song_mini_viz/mo3.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis3", files).redraw();
+		   });
+	
+	Promise.all([d3.json("song_mini_viz/br1.json"), d3.json("song_mini_viz/br2.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis4", files).redraw();
+		   });
+	
+	Promise.all([d3.json("song_mini_viz/br3.json"), d3.json("song_mini_viz/br4.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis4-2", files).redraw();
+		   });
+	
+	Promise.all([d3.json("song_mini_viz/bes1.json"), d3.json("song_mini_viz/bes2.json"), d3.json("song_mini_viz/bes3.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis5", files).redraw();
+		   });
+		   
+	Promise.all([d3.json("song_mini_viz/con1.json"), d3.json("song_mini_viz/con2.json"), d3.json("song_mini_viz/con3.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis6", files).redraw();
+		   });		   
+	
+	Promise.all([d3.json("song_mini_viz/njs1.json"), d3.json("song_mini_viz/njs2.json"), d3.json("song_mini_viz/njs3.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis7", files).redraw();
+		   });
+		   
+	Promise.all([d3.json("song_mini_viz/alt1.json"), d3.json("song_mini_viz/alt2.json"), d3.json("song_mini_viz/alt3.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis8", files).redraw();
+		   });
+		   
+	Promise.all([d3.json("song_mini_viz/no1.json"), d3.json("song_mini_viz/no2.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis9", files).redraw();
+		   });
+		   
+	Promise.all([d3.json("song_mini_viz/con4.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis10", files).redraw();
+		   });
+		   
+	Promise.all([d3.json("song_mini_viz/njs4.json")])
+	       .then(function(files) {
+			   new SmallVis1("card-vis11", files).redraw();
+		   });
+		   
+	// ==================================================
+	
+	Promise.all([d3.json("alb_compare/alb_cont3.json"), d3.json("alb_compare/alb_or1.json")])
+		   .then(function(files) {
+			   new SmallVis2("alb-vis1", files[0], files[1]).redraw(0);
+		   });
+		   
+	Promise.all([d3.json("alb_compare/alb_jump1.json"), d3.json("alb_compare/alb_bes2.json")])
+		   .then(function(files) {
+			   new SmallVis2("alb-vis2", files[0], files[1]).redraw(1);
+		   });
+		   
+	Promise.all([d3.json("alb_compare/alb_cont1.json"), d3.json("alb_compare/alb_alt2.json")])
+		   .then(function(files) {
+			   new SmallVis2("alb-vis3", files[0], files[1]).redraw(2);
+		   });
+		   
+	Promise.all([d3.json("alb_compare/alb_njs1.json"), d3.json("alb_compare/alb_alt3.json")])
+		   .then(function(files) {
+			   new SmallVis2("alb-vis4", files[0], files[1]).redraw(3);
+		   });
 });
 
 
 	
-function f(x) {
-	return 136 * x + 5;
+function f(x, length) {
+	if (length == 3) {
+		return 136 * x + 5;
+	} else if (length == 2) {
+		return 136 * x + 5 + 68;
+	} else {
+		return 136;
+	}
 }
 
 class SmallVis1 {
 	constructor(id, data) {
 		this.svg = d3.select("svg#" + id);
-		this.data = [ { "artists": "Beatles", "name": "Coucou pretite perruche", "cover": "keypoint_vinyl_selected.png", "genre": "british-rnb", "preview": "tada.wav" },
-					  { "artists": "David Bowie", "name": "Bonjour monisuer le lion", "cover": "keypoint_vinyl_unselected.png", "genre": "alternative-rnb", "preview": "https://p.scdn.co/mp3-preview/199c5fdb2a31730cd7257dbb0313fe3074298bf8?cid=774b29d4f13844c495f206cafdad9c86" },
-					  { "artists": "John Lennon", "name": "Si j'étais moins nu", "cover": "raf.png", "genre": "jump-blues", "preview": "https://p.scdn.co/mp3-preview/e06c059906825f2618c615e36b99fc3550197b69?cid=774b29d4f13844c495f206cafdad9c86" } ] // data;
+		this.data = data;
 		this.xScale = d3.scaleLinear().domain([0, this.data.length]).range([0, 300]);
 		this.yScale = d3.scaleLinear().domain([0, 1]).range([0, 100]);
 		this.audio = undefined;
@@ -45,9 +129,9 @@ class SmallVis1 {
 						
 		gs.filter(d => d.preview != undefined)
 		  .attr("class", "pointer");
-		
+		  		
 		gs.append("circle")
-		  .attr("cx", (d, i) => f(i))
+		  .attr("cx", (d, i) => f(i, this.data.length))
 		  .attr("cy", this.yScale(0.5))
 		  .attr("r", 5)
 		  .attr("class", d => d.genre)
@@ -57,7 +141,7 @@ class SmallVis1 {
 		  .append("image")
 		  .attr("height", 6)
 		  .attr("width", 6)
-		  .attr("x", (d, i) => f(i) - 3)
+		  .attr("x", (d, i) => f(i, this.data.length) - 3)
 		  .attr("y", this.yScale(0.5) - 3)
 		  .attr("xlink:href", "play.png")
 		  .attr("class", "play pointer");
@@ -68,7 +152,7 @@ class SmallVis1 {
 	}
 	
 	drawBaseCard(d, i) {
-		var cardX = f(i) + 13;
+		var cardX = f(i, this.data.length) + 13;
 		var cardY = 10;
 		this.svg.append("rect")
 		        .attr("class", "base-card")
@@ -161,14 +245,14 @@ class SmallVis2 {
 		this.maxIndex = 8;
 	}
 	
-	redraw() {			
+	redraw(number) {			
 		var defs = this.svg.append("defs")
 		
 		defs.selectAll("pattern")
 			.data([this.album1.cover, this.album2.cover])
 			.enter()
 			.append("pattern")
-			.attr("id", (d, i) => "cover" + (i + 1))
+			.attr("id", (d, i) => "cover" + (2 * number + (i + 1)))
 			.attr("width", 80)
 			.attr("height", 80)
 			.attr("x", -40)
@@ -220,7 +304,7 @@ class SmallVis2 {
 							
 				return arc.substring(0, arc.length - 5);
 			})
-			.attr("fill", "url(#cover1)")
+			.attr("fill", "url(#cover" + (2 * number + 1) + ")")
 			.attr("class", "stroke " + this.album1.genre)
 			.on("mouseover", this.focusOnAlbumHandler(1))
 			.on("mouseout", this.defocusOfAlbumHandler(1));
@@ -235,7 +319,7 @@ class SmallVis2 {
 							
 				return arc.substring(0, arc.length - 5);
 			})
-			.attr("fill", "url(#cover2)")
+			.attr("fill", "url(#cover" + (2 * number + 2) + ")")
 			.attr("class", "stroke " + this.album2.genre)
 			.on("mouseover", this.focusOnAlbumHandler(2))
 			.on("mouseout", this.defocusOfAlbumHandler(2));

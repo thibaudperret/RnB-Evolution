@@ -18,7 +18,7 @@ var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "acoust
 var INIT_YEAR = 1988;
 
 whenDocumentLoaded(() => {
-	Promise.all([d3.json('./rnb_data.json'), d3.json('./rnb_keypoints.json')])
+	Promise.all([d3.json('./filtered_data.json'), d3.json('./rnb_keypoints.json')])
 		   .then(function(files) {
 			   var data = files[0];
 			   var info = files[1];
@@ -31,14 +31,14 @@ whenDocumentLoaded(() => {
 
 class Slider {
 	constructor(data, graph) {
-		this.scale = d3.scaleLinear().domain([1939, 2018])
+		this.scale = d3.scaleLinear().domain([1954, 2019])
 									  .range([0, 800]);
 		
 		this.svg = d3.select("#timeline");
 		this.data = data;
 		this.scaleinv = d3.scaleLinear()
 					.domain([0,800])
-					.range([1940, 2017])
+					.range([1955, 2018])
 					.clamp(true);
 		
 		this.year = INIT_YEAR;
@@ -62,6 +62,7 @@ class Slider {
 		this.svg.selectAll("circle.timeline_year")
 				.data(Object.keys(this.data))
 				.enter()
+				.filter(d => d >= 1955)
 				.append("circle")
 				.attr("class","timeline_year")
 				.attr("cx", d => this.scale(d)) 
@@ -89,10 +90,10 @@ class Slider {
 	}
 	
 	redrawAxis(){
-		var labels = ["40s", "50s", "60s", "70s", "80s", "90s", "00s", "10s"];
+		var labels = ["60s", "70s", "80s", "90s", "00s", "10s"];
 		
-		var labelScale = d3.scaleLinear().domain([0,7])
-								.range([1940, 2010]);
+		var labelScale = d3.scaleLinear().domain([0,5])
+								.range([1960, 2010]);
 		this.svg.selectAll("text")
 				.data(labels)
 				.enter()
@@ -104,14 +105,14 @@ class Slider {
 	}
 	
 	redrawKDots(){
-		var range = Array(78);
+		var range = Array(64);
 		
 		this.svg.selectAll("kdots")
 				.data(range)
 				.enter()
 				.append("circle")
 				.attr("class","kdot")
-				.attr("cx", (d,i) => this.scale(i+1940)) 
+				.attr("cx", (d,i) => this.scale(i+1955)) 
 				.attr("cy", 50)
 				.attr("r", 1)
 				.attr("fill","black");
@@ -156,7 +157,7 @@ class Slider {
 	changeYear(newyear){
 		this.svg.select("#thumb").attr("x", this.scale(newyear)-5)
 		this.svg.selectAll("circle.timeline_year")
-				.data(Object.keys(this.data))
+				//.data(Object.keys(this.data))
 				.attr("fill","url(#image2)")
 				.filter(d => d == newyear)
 				.attr("fill","url(#image1)");

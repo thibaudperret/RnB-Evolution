@@ -1,1 +1,0 @@
-MoatDataJsonpRequest({"nu": 707503, "nm": 452962})
