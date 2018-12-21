@@ -278,6 +278,20 @@ class Graph {
 				.attr("x2", this.xScale(1))
 				.attr("y2", this.yScale(0))
 				.attr("class", "axis fixed");
+				
+		this.svg.append("line")
+				.attr("x1", this.xScale(1))
+				.attr("y1", this.yScale(0))
+				.attr("x2", this.xScale(0.98))
+				.attr("y2", this.yScale(0.02))
+				.attr("class", "axis fixed");
+				
+		this.svg.append("line")
+				.attr("x1", this.xScale(1))
+				.attr("y1", this.yScale(0))
+				.attr("x2", this.xScale(0.98))
+				.attr("y2", this.yScale(-0.02))
+				.attr("class", "axis fixed");
 		   
 		// y-axis
 		this.svg.append("line")
@@ -285,6 +299,20 @@ class Graph {
 				.attr("y1", this.yScale(0))
 				.attr("x2", this.xScale(0))
 				.attr("y2", this.yScale(1))
+				.attr("class", "axis fixed");
+				
+		this.svg.append("line")
+				.attr("x1", this.xScale(0))
+				.attr("y1", this.yScale(1))
+				.attr("x2", this.xScale(0.02))
+				.attr("y2", this.yScale(0.98))
+				.attr("class", "axis fixed");
+				
+		this.svg.append("line")
+				.attr("x1", this.xScale(0))
+				.attr("y1", this.yScale(1))
+				.attr("x2", this.xScale(-0.02))
+				.attr("y2", this.yScale(0.98))
 				.attr("class", "axis fixed");
 		
 		// x-label
