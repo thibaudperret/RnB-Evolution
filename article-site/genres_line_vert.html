@@ -1,0 +1,137 @@
+<html>
+<head>
+	<link rel="stylesheet" href="index-style.css" type="text/css" media="screen"/>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+	<script>
+		d3.selectAll("text.genre")
+		  .on("mouseover", function(d, i) {
+			  console.log(this);
+		  });
+	</script>
+	<svg version="1.1" viewBox="-10 -10 120 220" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" >
+		<defs>
+			<filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">
+			<!-- Thicken out the original shape -->
+				<feMorphology operator="dilate" radius="0" in="SourceAlpha" result="thicken" />
+
+				<!-- Use a gaussian blur to create the soft blurriness of the glow -->
+				<feGaussianBlur in="thicken" stdDeviation="1" result="blurred" />
+
+				<!-- Change the colour -->
+				<feFlood flood-color="rgb(255,0,0)" result="glowColor" />
+
+				<!-- Color in the glows -->
+				<feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+				<!--	Layer the effects together -->
+				<feMerge>
+				<feMergeNode in="softGlow_colored"/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+
+			</filter>
+
+			<filter id="blurMe">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="0.2"/>
+			</filter>
+		</defs>
+
+		<!-- Jump Blues-->
+		<line id="jump-blues-line" class="stroke jump-blues" x1="60" y1="0" x2="60" y2="30" stroke-width="0.5" />
+		<text id="jump-blues-text" x="65" y="17" style="font-size:3px" filter=url(#sofGlow)>Jump Blues</text>
+
+		<!-- Early RnB-->
+		<line id="early-rnb-line" class="stroke early-rnb" x1="60" y1="30" x2="60" y2="60" stroke-width="0.5" />
+		<text id="early-rnb-text" x="65" y="47" style="font-size:3px">Early R&B</text>
+
+		<!-- Soul-->
+		<line id="soul-line", x1="60" y1="60" x2="60" y2="90", stroke="rgb(211, 211, 211)" stroke-width="0.5"/>
+		<text id="soul-text" x="63" y="75" style="font-size:3px", fill="rgb(211, 211, 211)">Soul</text>
+
+		<!-- Disco-->
+		<line id="disco-line", x1="60" y1="90" x2="60" y2="120", stroke="rgb(211, 211, 211)" stroke-width="0.5" />
+		<text id="disco-text" x="65" y="108" style="font-size:3px" fill="rgb(211, 211, 211)">Disco</text>
+
+
+		<!-- Contemporary R&B-->
+		<line id="contemporary-line", class="stroke contemporary-rnb", x1="60" y1="120" x2="60" y2="160", stroke-width="0.5" />
+		<text id="contemporary-text" x="65" y="137" style="font-size:3px">Contemporary R&B</text>
+
+		<!-- new Orleans-->
+		<path
+		class="stroke new-orleans-rnb"
+		id="new-orleans-line"
+		d="M 60 40 L 20 50 L 20 80"
+		fill="none"
+		style="stroke-width:0.5"
+		/>
+		<text id="new-orleans-text" x="19" y="83" style="font-size:3px">New Orleans R&B</text>
+
+		<!-- Motown-->
+		<path
+		class="stroke motown-rnb"
+		id="motown-line"
+		d="M 60 55 L 33.3 61.675 L 33.3 80"
+		fill="none"
+		style="stroke-width:0.5"
+		/>
+		<text id="motown-text" x="32.3" y="83" style="font-size:3px" >Motown R&B</text>
+
+		<!-- British-->
+		<path
+		class="stroke british-rnb"
+		id="british-line"
+		d="M 60 62 L 46.6 65.25 L 46.6 80"
+		fill="none"
+		style="stroke-width:0.5"
+		/>
+		<text id="motown-text" x="45.6" y="83" style="font-size:3px" >British R&B</text>
+
+		<!-- New Jack Swing-->
+		<path
+		class="stroke new-jack-swing-rnb"
+		id="new-jack-swing-line"
+		d="M 60 130 L 33.3 136.675 L 33.3 170"
+		fill="none"
+		style="stroke-width:0.5"
+		/>
+		<text id="new-jack-swing-text" x="31.3" y="140.425" style="font-size:3px" transform="rotate(90, 31.3, 140.425)">New Jack Swing R&B</text>
+
+		<!-- Alternative RnB-->
+		<path
+		class="stroke alternative-rnb"
+		id="alternative-line"
+		d="M 60 140 L 46.6 143.25 L 46.6 170"
+		fill="none"
+		style="stroke-width:0.5"
+		/>
+		<text id="alternative-text" x="44.6" y="148" style="font-size:3px" transform="rotate(90, 44.6, 148)">Alternative R&B</text>
+
+		<g id="decades-dots" fill="rgb(0, 0, 0)">
+			<circle cx="60"  cy="30" r="1" />
+			<circle cx="60"  cy="60" r="1" />
+			<circle cx="60"  cy="90" r="1" />
+			<circle cx="60" cy="120" r="1" />
+			<circle cx="60" cy="160" r="1" />
+		</g>
+
+		<g id="decades-texts" fill="rgb(0, 0, 0)">
+			<text x="54",  y="31", style="font-size:2px">50s</text>
+			<text x="54",  y="61", style="font-size:2px">60s</text>
+			<text x="54",  y="91", style="font-size:2px">70s</text>
+			<text x="54",  y="121", style="font-size:2px">80s</text>
+			<text x="54",  y="161", style="font-size:2px">10s</text>
+		</g>
+
+		<g id="branch-genres" fill="rgb(0, 0, 0)">
+			<rect x="59" y="39" width="2" height="2"/>
+			<rect x="59" y="54" width="2" height="2"/>
+			<rect x="59" y="61" width="2" height="2"/>
+			<rect x="59" y="129" width="2" height="2"/>
+			<rect x="59" y="139" width="2" height="2"/>
+		</g>
+	</svg>
+</body>
+</html>
