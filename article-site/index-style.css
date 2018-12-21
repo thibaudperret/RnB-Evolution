@@ -4,12 +4,56 @@ body {
 }
 
 div.article {
-	width: 30%;
+	width: 40%;
 	min-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 40px;
 	padding: 40x;
+	line-height: 1.7em;
+}
+
+br {
+   display: block;
+   margin: 8px 0;
+}
+
+blockquote {
+  /* background: #f9f9f9; */
+  font-size: larger;
+  font-style: oblique;
+  color: #7b7373;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+    content: no-close-quote;
+}
+
+figure {
+	margin: 5px 5px;
+}
+
+figcaption{
+	font-size: small;
+	width: 60%;
+	font-style: italic;
+	color: gray;
+	line-height: 1.4em;
+}
+
+blockquote p {
+  display: inline;
 }
 
 .article h1 {
@@ -18,6 +62,7 @@ div.article {
 
 .article h2 {
 	color: #005f2f;
+	text-align: center;
 }
 
 .article p {

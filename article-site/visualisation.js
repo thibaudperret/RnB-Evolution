@@ -13,8 +13,8 @@ d3.selection.prototype.moveToFront = function() {
 	});
 };
 
-var GENRES = ["contemporary-rnb", "british-rnb", "alternative-rnb", "new-jack-swing-rnb", "new-orleans-rnb", "jump-blues", "blue-eyed-soul"];
-var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "liveness", "speechiness"];
+var GENRES = ["contemporary-rnb", "british-rnb", "alternative-rnb", "new-jack-swing-rnb", "new-orleans-rnb", "jump-blues", "blue-eyed-soul", "early-rnb", "motown-rnb"];
+var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "acousticness", "liveness", "speechiness"];
 var INIT_YEAR = 1988;
 
 whenDocumentLoaded(() => {
@@ -196,6 +196,7 @@ class Graph {
 	redraw() {		   				
 		this.drawTitle();
 		this.drawLegend();
+		console.log(this.data.filter(d => d.year == this.year).length);
 		var gs = this.svg.selectAll("g")
 						 .data(this.data.filter(d => d.year == this.year), d => d)
 						 .enter()
@@ -255,12 +256,17 @@ class Graph {
 			this.yFeature = FEATURES[this.yFeatureIndex];		
 			this.svg.select("text." + xy + ".label").text(this.yFeature);
 		}
+		
 		var gs = this.svg.selectAll("g.pointer");
-		console.log(this.xFeature);
 		gs.select("circle")
 		  .transition()
 		  .attr("cx", d => this.xScale(d[this.xFeature]))
 		  .attr("cy", d => this.yScale(d[this.yFeature]));
+		  
+		gs.select("image")
+		  .transition()
+		  .attr("x", d => this.xScale(d[this.xFeature]) - 3)
+		  .attr("y", d => this.yScale(d[this.yFeature]) - 3);
 	}
 	
 	drawAxis() {
@@ -290,8 +296,6 @@ class Graph {
 		// y-label
 		this.svg.append("text")
 				.attr("transform", "translate(" + this.xScale(-0.05) + "," + this.yScale(0.5) + ") rotate(270)")
-				//.attr("x", )
-				//.attr("y", this.yScale(0.5))
 				.attr("class", "axis y label fixed")
 				.text(this.yFeature);
 				
@@ -315,8 +319,6 @@ class Graph {
 		// y changers
 		this.svg.append("text")
 				.attr("transform", "translate(" + this.xScale(-0.05) + "," + this.yScale(0.7) + ") rotate(270)")
-				// .attr("x", this.xScale(-0.05))
-				// .attr("y", this.yScale(0.7))
 				.attr("class", "axis label pointer fixed")
 				// >
 				.text("▶")
@@ -324,8 +326,6 @@ class Graph {
 				
 		this.svg.append("text")
 				.attr("transform", "translate(" + this.xScale(-0.05) + "," + this.yScale(0.3) + ") rotate(270)")
-				// .attr("x", this.xScale(-0.05))
-				// .attr("y", this.yScale(0.3))
 				.attr("class", "axis label pointer fixed")
 				// <
 				.text("◀")
@@ -341,7 +341,7 @@ class Graph {
 	}
 	
 	drawLegend() {
-		var genres = Array.from(new Set(this.data.filter(d => d.year == this.year).map(d => d.genre)));
+		var genres = GENRES;//Array.from(new Set(this.data.filter(d => d.year == this.year).map(d => d.genre)));
 		this.svg.selectAll("dontknow")
 				.data(genres)
 				.enter()
@@ -447,19 +447,6 @@ function displaySongInfo(d, i, graph, elem) {
 						     .attr("xlilnk:href", "pause.png");
 					   }
 				   }
-				   
-				   
-				   // if (graph.audio != undefined) {
-				  	   // graph.audio.pause();
-					   // graph.audio = undefined;
-					   // gp.select("image")
-					     // .attr("xlink:href", "play.png");
-				   // } else if (d.preview != "") {
-					   // graph.audio = new Audio(d.preview);
-					   // graph.audio.play();
-					   // gp.select("image")
-					     // .attr("xlink:href", "pause.png");
-				   // }
 			   })
 			   .moveToFront();
 			   
@@ -511,7 +498,7 @@ function cut(text, width) {
             lineHeight = 1.1, // ems
             x = text.attr("x"),
             y = text.attr("y"),
-            dy = 0, //parseFloat(text.attr("dy")),
+            dy = 0,
             tspan = text.text(null)
                         .append("tspan")
                         .attr("x", x)

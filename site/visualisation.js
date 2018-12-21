@@ -14,7 +14,7 @@ d3.selection.prototype.moveToFront = function() {
 };
 
 var GENRES = ["contemporary-rnb", "british-rnb", "alternative-rnb", "new-jack-swing-rnb", "new-orleans-rnb", "jump-blues", "blue-eyed-soul"];
-var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "liveness", "speechiness"];
+var FEATURES = ["energy", "valence", "danceability", "instrumentalness", "acousticness", "liveness", "speechiness"];
 var INIT_YEAR = 1988;
 
 whenDocumentLoaded(() => {
